@@ -1,0 +1,16 @@
+.header {
+  min-width: 320px;
+  background-color: $blue-color;
+}
+
+.header__menu {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.header__list {
+  list-style-type: none;
+}

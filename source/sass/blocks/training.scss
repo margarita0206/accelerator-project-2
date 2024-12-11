@@ -1,0 +1,33 @@
+.training {
+	p {
+		@include font($primary-font, 14px, 20px, $primary-color);
+    font-weight: 400;
+		width: 290px;
+	}
+
+	@media (min-width: $tablet-width) {
+		p {
+			@include font($primary-font, 16px, 24px, $primary-color);
+			font-weight: 400;
+			width: 678px;
+		}
+	}
+
+	@media (min-width: $desktop-width) {
+		p {
+			width: 820px;
+		}
+	}
+}
+
+.training__title {
+	text-align: left;
+
+	@media (min-width: $tablet-width) {
+		padding-top: 20px;
+	}
+
+	@media (min-width: $desktop-width) {
+		padding-top: 19px;
+	}
+}

@@ -1,0 +1,22 @@
+.title {
+	@include font($primary-font, 25px, 25px, $primary-color);
+  font-weight: 800;
+	position: relative;
+	z-index: 1;
+
+	@media (min-width: $desktop-width) {
+		@include font($primary-font, 35px, 35px, $primary-color);
+    font-weight: 800;
+	}
+
+	&::after {
+		content: attr(title);
+		position: absolute;
+		z-index: -1;
+		color: rgba(45, 56, 63, 0.06);
+		font-size: 26px;
+		line-height: 26px;
+		left: 0;
+		top: -8px;
+	}
+}
