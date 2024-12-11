@@ -1,4 +1,7 @@
 .training {
+	width: 290px;
+	margin: 0 auto;
+	
 	p {
 		@include font($primary-font, 14px, 20px, $primary-color);
     font-weight: 400;

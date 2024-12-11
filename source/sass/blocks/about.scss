@@ -1,0 +1,44 @@
+.about__text {
+	width: 290px;
+	margin: 0 auto;
+
+	h2 {
+		@include font($primary-font, 22px, 22px, $primary-color);
+    font-weight: 800;
+		z-index: 1;
+		position: relative;
+		margin: 16px 0 42px;
+		width: 290px;
+
+		&::before {
+			content: attr(title); 
+			position: absolute;
+      z-index: -1;
+			color: rgba(45, 56, 63, 0.03);
+		  font-size: 26px;
+		  line-height: 26px;
+		  left: 0;
+		  top: -8px;
+		}
+	}
+
+	h3 {
+		@include font($primary-font, 16px, 16px, $primary-color);
+    font-weight: 700;
+		margin: 0;
+		margin-bottom: 13px;
+		width: 290px;
+	}
+
+	p {
+		@include font($primary-font, 14px, 20px, $primary-color);
+    font-weight: 400;
+		margin: 0;
+		margin-bottom: 25px;
+		width: 290px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
