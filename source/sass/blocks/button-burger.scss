@@ -1,0 +1,33 @@
+.button-burger {
+	display: block;
+	position: absolute;
+	margin: 15px 0 15px 15px;
+
+	@media (min-width: $tablet-width) {
+		margin: 20px 0 20px 45px;
+		padding-top: 8px;
+	}
+
+	@media (min-width: $desktop-width) {
+		display: none;
+	}
+}
+
+.button-burger__menu {
+	display: block;
+	width: 26px;
+	height: 26px;
+	cursor: pointer;
+
+	&::before {
+		content: "";
+		position: absolute;
+		display: block;
+		width: 26px;
+		height: 26px;
+		mask-image: url("../../__spritemap#sprite-menu-burger-view");
+		background-color: $white-color;
+    mask-size: 26px 26px;
+		mask-repeat: no-repeat;
+	}
+}

@@ -7,7 +7,7 @@
 	}
 
 	@media (min-width: $desktop-width) {
-		padding: 32px 0 0;
+		padding: 0;
     margin-bottom: 32px;
 	}
 }
@@ -26,6 +26,7 @@
 .footer__logotype {
   display: block;
   margin: 0 auto;
+  cursor: pointer;
 }
 
 .footer__tel {
@@ -148,6 +149,16 @@
 
   @media (min-width: $tablet-width) {
 		padding-left: 34px;
+    margin: 0;
+	}
+
+  @media (min-width: $desktop-width) {
+		padding-left: 34px;
+    margin-bottom: 35px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
 	}
 }
 
@@ -206,10 +217,11 @@
 
 .footer__contacts-list {
   padding: 0;
-  margin: 0 15px;
+  margin: 0 15px 30px;
 
   @media (min-width: $tablet-width) {
 		margin: 0;
+    margin-bottom: 40px;
     display: flex;
     flex-wrap: wrap;
     column-gap: 40px;
@@ -219,7 +231,7 @@
   @media (min-width: $desktop-width) {
     flex-direction: column;
     width: 346px;
-    margin: 0 0 0 120px;
+    margin: 0;
   }
 }
 
@@ -238,8 +250,8 @@
   }
 
    @media (min-width: $desktop-width) {
-    width: 480px;
-    margin: 100px 100px 25px 120px;
+    width: 500px;
+    margin: 100px 100px 25px 0;
   }
 }
 
@@ -252,7 +264,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 1440px;
+    width: 600px;
+    margin: 0;
   }
 
   p {
@@ -270,7 +283,7 @@
 
     @media (min-width: $desktop-width) {
       width: 500px;
-      margin: 0 100px 50px 120px;
+      margin: 0 100px 50px 0;
     }
   }
 }
@@ -289,5 +302,31 @@
 .footer__contacts-wrapper {
   @media (min-width: $desktop-width) {
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 95px;
   }
+}
+
+
+.footer__map {
+	width: 320px;
+	margin: 0 auto;
+  padding-bottom: 20px;
+
+	@media (min-width: $tablet-width) {
+		width: 768px;
+    padding-bottom: 40px;
+	}
+
+	@media (min-width: $desktop-width) {
+		margin: 149px 0 0;
+    padding: 0;
+		width: 600px;
+    height: 324px;
+	}
+}
+
+.footer__map-img {
+  display: block;
 }

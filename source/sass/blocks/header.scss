@@ -14,3 +14,49 @@
 .header__list {
   list-style-type: none;
 }
+
+.header__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 142px;
+  margin: 15px 15px 15px 0;
+
+  @media (min-width: $tablet-width) {
+		width: 452px;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px 45px 20px 0;
+	}
+}
+
+.header__logotype {
+  margin-bottom: 14px;
+
+  @media (min-width: $tablet-width) {
+  margin: 0;
+  }
+}
+
+.header__tel {
+  @include font($primary-font, 14px, 14px, $white-color);
+  font-weight: 600;
+  text-decoration: none;
+  text-align: right;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 17px;
+  }
+}
+
+.header__container {
+  min-width: 320px;
+  min-height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+		min-height: 82px;
+	}
+}
