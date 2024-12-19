@@ -94,29 +94,33 @@
 
     <section class="page-body__reviews reviews" data-test="reviews">
       <div class="reviews__container-slide">
-        <h2 class="reviews__title title" title="Отзывы">Отзывы</h2>
-        <div class="reviews__slider-wrapper">
-          <div class="reviews__button-wrapper reviews__button-wrapper--prew">
+        <div class="reviews__wrapper-tablet">
+          <div class="reviews__title-wrapper">
+            <h2 class="reviews__title title" title="Отзывы">Отзывы</h2>
+          </div>
+          <div class="reviews__button-wrapper swiper-navigation swiper-navigation--reviews">
             <button class="reviews__swiper-button--prev reviews__swiper-button swiper-button-prev swiper-button" type="button" tabindex="0">
               <span class="visually-hidden">Предыдущий слайд.</span>
             </button>
-          </div>
-          <div class="reviews__button-wrapper reviews__button-wrapper--next">
             <button class="reviews__swiper-button--next reviews__swiper-button swiper-button-next swiper-button" type="button" tabindex="0">
               <span class="visually-hidden">Следующий слайд.</span>
             </button>
           </div>
-          <div class="reviews__swiper swiper">
+        </div>
+        <div class="reviews__slider-wrapper">
+          <div class="reviews__swiper swiper4">
             <div class="reviews__swiper-wrapper swiper-wrapper">
-              <div class="swiper-slide reviews__wrapper">
-                <picture>
-                  <source media="(min-width: 1440px)" width="258" height="253" type="image/webp" srcset="img/reviews-desktop1@1x.webp 1x, img/reviews-desktop1@2x.webp 2x">
-                  <source media="(min-width: 1440px)" width="258" height="253" type="image/jpg" srcset="img/reviews-desktop1@1x.jpg 1x, img/reviews-desktop1@2x.jpg 2x">
-                  <source media="(min-width: 768px)" width="186" height="237" type="image/webp" srcset="img/reviews-tablet1@1x.webp 1x, img/reviews-tablet1@2x.webp 2x">
-                  <source media="(min-width: 768px)" width="186" height="237" type="image/jpg" srcset="img/reviews-tablet1@1x.jpg 1x, img/reviews-tablet1@2x.jpg 2x">
-                  <source width="250" height="169" type="image/webp" srcset="img/reviews-mobile1@1x.webp 1x, img/reviews-mobile1@2x.webp 2x">
-                  <img class="reviews__img" src="img/reviews-mobile1@1x.jpg" width="250" height="169" srcset="img/reviews-mobile1@2x.jpg 2x" alt="Отзыв от Фролова Александра из Москвы" loading="lazy" fetchpriority="low">
-                </picture>
+              <div class="reviews__wrapper swiper-slide">
+                <div class="reviews__picture">
+                  <picture>
+                    <source media="(min-width: 1440px)" width="258" height="253" type="image/webp" srcset="img/reviews-desktop1@1x.webp 1x, img/reviews-desktop1@2x.webp 2x">
+                    <source media="(min-width: 1440px)" width="258" height="253" type="image/jpg" srcset="img/reviews-desktop1@1x.jpg 1x, img/reviews-desktop1@2x.jpg 2x">
+                    <source media="(min-width: 768px)" width="186" height="237" type="image/webp" srcset="img/reviews-tablet1@1x.webp 1x, img/reviews-tablet1@2x.webp 2x">
+                    <source media="(min-width: 768px)" width="186" height="237" type="image/jpg" srcset="img/reviews-tablet1@1x.jpg 1x, img/reviews-tablet1@2x.jpg 2x">
+                    <source width="250" height="169" type="image/webp" srcset="img/reviews-mobile1@1x.webp 1x, img/reviews-mobile1@2x.webp 2x">
+                    <img class="reviews__img" src="img/reviews-mobile1@1x.jpg" width="250" height="169" srcset="img/reviews-mobile1@2x.jpg 2x" alt="Отзыв от Фролова Александра из Москвы" loading="lazy" fetchpriority="low">
+                  </picture>
+                </div>
                 <div class="reviews__container">
                   <p>Осенью ходили в поход на Алтай с друзьями. Впечатления потрясающие! Инструкторы, настоящие эксперты, всему научили, все показали. Делились историями о местах, людях, культуре места.</p>
                   <p>С уверенностью могу сказать, что жизнь разделилась на до этого и после. Ещё никогда не отдыхал так душой и телом. Всем очень рекомендую!</p>
@@ -124,15 +128,17 @@
                   <p class="reviews__gorod">38 лет, Москва</p>
                 </div>
               </div>
-              <div class="swiper-slide reviews__wrapper">
-                <picture>
-                  <source media="(min-width: 1440px)" width="258" height="253" type="image/webp" srcset="img/reviews-desktop2@1x.webp 1x, img/reviews-desktop1@2x.webp 2x">
-                  <source media="(min-width: 1440px)" width="258" height="253" type="image/jpg" srcset="img/reviews-desktop2@1x.jpg 1x, img/reviews-desktop1@2x.jpg 2x">
-                  <source media="(min-width: 768px)" width="186" height="237" type="image/webp" srcset="img/reviews-tablet2@1x.webp 1x, img/reviews-tablet1@2x.webp 2x">
-                  <source media="(min-width: 768px)" width="186" height="237" type="image/jpg" srcset="img/reviews-tablet2@1x.jpg 1x, img/reviews-tablet1@2x.jpg 2x">
-                  <source width="250" height="169" type="image/webp" srcset="img/reviews-mobile2@1x.webp 1x, img/reviews-mobile2@2x.webp 2x">
-                  <img class="reviews__img" src="img/reviews-mobile2@1x.jpg" width="250" height="169" srcset="img/reviews-mobile2@2x.jpg 2x" alt="Отзыв от Ивана Соловьева из Владивостока" loading="lazy" fetchpriority="low">
-                </picture>
+              <div class="reviews__wrapper swiper-slide">
+                <div class="reviews__picture">
+                    <picture>
+                    <source media="(min-width: 1440px)" width="258" height="253" type="image/webp" srcset="img/reviews-desktop2@1x.webp 1x, img/reviews-desktop2@2x.webp 2x">
+                    <source media="(min-width: 1440px)" width="258" height="253" type="image/jpg" srcset="img/reviews-desktop2@1x.jpg 1x, img/reviews-desktop2@2x.jpg 2x">
+                    <source media="(min-width: 768px)" width="186" height="237" type="image/webp" srcset="img/reviews-tablet2@1x.webp 1x, img/reviews-tablet2@2x.webp 2x">
+                    <source media="(min-width: 768px)" width="186" height="237" type="image/jpg" srcset="img/reviews-tablet2@1x.jpg 1x, img/reviews-tablet2@2x.jpg 2x">
+                    <source width="250" height="169" type="image/webp" srcset="img/reviews-mobile2@1x.webp 1x, img/reviews-mobile2@2x.webp 2x">
+                    <img class="reviews__img" src="img/reviews-mobile2@1x.jpg" width="250" height="169" srcset="img/reviews-mobile2@2x.jpg 2x" alt="Отзыв от Ивана Соловьева из Владивостока" loading="lazy" fetchpriority="low">
+                  </picture>
+                </div>
                 <div class="reviews__container">
                   <p>Хороший полноценный поход с разнообразными локациями. В начале дорога идёт по лыжне, далее прошли мимо полигона, по болотам, у озёр и лесных ручьёв, остатков дач конца 19 века.
                     Было очень интересно!</p>
@@ -142,15 +148,17 @@
                   <p class="reviews__gorod">25 лет, Владивосток</p>
                 </div>
               </div>
-              <div class="swiper-slide reviews__wrapper">
-                <picture>
-                  <source media="(min-width: 1440px)" width="258" height="253" type="image/webp" srcset="img/reviews-desktop3@1x.webp 1x, img/reviews-desktop3@2x.webp 2x">
-                  <source media="(min-width: 1440px)" width="258" height="253" type="image/jpg" srcset="img/reviews-desktop3@1x.jpg 1x, img/reviews-desktop3@2x.jpg 2x">
-                  <source media="(min-width: 768px)" width="186" height="237" type="image/webp" srcset="img/reviews-tablet3@1x.webp 1x, img/reviews-tablet3@2x.webp 2x">
-                  <source media="(min-width: 768px)" width="186" height="237" type="image/jpg" srcset="img/reviews-tablet3@1x.jpg 1x, img/reviews-tablet3@2x.jpg 2x">
-                  <source width="250" height="169" type="image/webp" srcset="img/reviews-mobile3@1x.webp 1x, img/reviews-mobile3@2x.webp 2x">
-                  <img class="reviews__img" src="img/reviews-mobile3@1x.jpg" width="250" height="169" srcset="img/reviews-mobile3@2x.jpg 2x" alt="Отзыв от Евгения Баженова из Костромы" loading="lazy" fetchpriority="low">
-                </picture>
+              <div class="reviews__wrapper swiper-slide">
+                <div class="reviews__picture">
+                  <picture>
+                    <source media="(min-width: 1440px)" width="258" height="253" type="image/webp" srcset="img/reviews-desktop3@1x.webp 1x, img/reviews-desktop3@2x.webp 2x">
+                    <source media="(min-width: 1440px)" width="258" height="253" type="image/jpg" srcset="img/reviews-desktop3@1x.jpg 1x, img/reviews-desktop3@2x.jpg 2x">
+                    <source media="(min-width: 768px)" width="186" height="237" type="image/webp" srcset="img/reviews-tablet3@1x.webp 1x, img/reviews-tablet3@2x.webp 2x">
+                    <source media="(min-width: 768px)" width="186" height="237" type="image/jpg" srcset="img/reviews-tablet3@1x.jpg 1x, img/reviews-tablet3@2x.jpg 2x">
+                    <source width="250" height="169" type="image/webp" srcset="img/reviews-mobile3@1x.webp 1x, img/reviews-mobile3@2x.webp 2x">
+                    <img class="reviews__img" src="img/reviews-mobile3@1x.jpg" width="250" height="169" srcset="img/reviews-mobile3@2x.jpg 2x" alt="Отзыв от Евгения Баженова из Костромы" loading="lazy" fetchpriority="low">
+                  </picture>
+                </div>
                 <div class="reviews__container">
                   <p>Ранее не ходила на такие длинные дистанции. В первый день прошли около 30 км, физически я устала на 18 км, поэтому не была уверена, пройду ли до конца. Но я справилась. Второй день прошёл легче, чем ожидала, видимо организм уже привык.</p>
                   <p>Спасибо ребятам, инструкторам за помощь и поддержку! Я была рада быть в такой компании.</p>
@@ -158,15 +166,17 @@
                   <p class="reviews__gorod">23 года, Кострома</p>
                 </div>
               </div>
-              <div class="swiper-slide reviews__wrapper">
-                <picture>
-                  <source media="(min-width: 1440px)" width="258" height="253" type="image/webp" srcset="img/reviews-desktop4@1x.webp 1x, img/reviews-desktop4@2x.webp 2x">
-                  <source media="(min-width: 1440px)" width="258" height="253" type="image/jpg" srcset="img/reviews-desktop4@1x.jpg 1x, img/reviews-desktop4@2x.jpg 2x">
-                  <source media="(min-width: 768px)" width="186" height="237" type="image/webp" srcset="img/reviews-tablet4@1x.webp 1x, img/reviews-tablet4@2x.webp 2x">
-                  <source media="(min-width: 768px)" width="186" height="237" type="image/jpg" srcset="img/reviews-tablet4@1x.jpg 1x, img/reviews-tablet4@2x.jpg 2x">
-                  <source width="250" height="169" type="image/webp" srcset="img/reviews-mobile4@1x.webp 1x, img/reviews-mobile4@2x.webp 2x">
-                  <img class="reviews__img" src="img/reviews-mobile4@1x.jpg" width="250" height="169" srcset="img/reviews-mobile4@2x.jpg 2x" alt="Отзыв от Елены Пироговой из Тюмени" loading="lazy" fetchpriority="low">
-                </picture>
+              <div class="reviews__wrapper swiper-slide">
+                <div class="reviews__picture">
+                  <picture>
+                    <source media="(min-width: 1440px)" width="258" height="253" type="image/webp" srcset="img/reviews-desktop4@1x.webp 1x, img/reviews-desktop4@2x.webp 2x">
+                    <source media="(min-width: 1440px)" width="258" height="253" type="image/jpg" srcset="img/reviews-desktop4@1x.jpg 1x, img/reviews-desktop4@2x.jpg 2x">
+                    <source media="(min-width: 768px)" width="186" height="237" type="image/webp" srcset="img/reviews-tablet4@1x.webp 1x, img/reviews-tablet4@2x.webp 2x">
+                    <source media="(min-width: 768px)" width="186" height="237" type="image/jpg" srcset="img/reviews-tablet4@1x.jpg 1x, img/reviews-tablet4@2x.jpg 2x">
+                    <source width="250" height="169" type="image/webp" srcset="img/reviews-mobile4@1x.webp 1x, img/reviews-mobile4@2x.webp 2x">
+                    <img class="reviews__img" src="img/reviews-mobile4@1x.jpg" width="250" height="169" srcset="img/reviews-mobile4@2x.jpg 2x" alt="Отзыв от Елены Пироговой из Тюмени" loading="lazy" fetchpriority="low">
+                  </picture>
+                </div>
                 <div class="reviews__container">
                   <p>Это был опыт, изменивший мою жизнь! Думала, не справлюсь, но все получилось! Дух захватывает, когда наконец‑то, преодолев все трудности и препятствия, взбираешься на вершину.</p>
                   <p>У нас собралась потрясающая команда. Все друг друга поддерживали, по вечерам мы сидели вместе у костра и пели песни. Обязательно повторю такое приключение!</p>
@@ -181,8 +191,26 @@
     </section>
 
     <div data-test="adv">adv</div>
-    <div data-test="gallery">gallery</div>
-    <div data-test="form">form</div>
+    
+    <section class="page-body__gallery gallery" data-test="gallery">
+
+    </section>
+
+    <section class="page-body__form form" data-test="form">
+      <div class="form__container">
+        <h2>Остались вопросы?</h2>
+        <p>Заполните форму и наш оператор<br> свяжется<br> с вами для консультации.</p>
+        <div class="form__wrapper">
+          <form class="form__form-question" method="post" action="https://echo.htmlacademy.ru">
+            <label class="visually-hidden" for="phone">Введите ваш номер телефона</label>
+            <input class="form__input" type="tel" name="phone" id="phone" pattern="[0-9]+" placeholder="Телефон" required>
+            <label class="visually-hidden" for="email">Введите ваш email</label>
+              <input class="form__input" type="text" name="email" id="email" pattern="[а-яА-ЯёЁa-zA-Z\s]+" placeholder="Email" required>
+            <button class="form__button" type="submit">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </section>
 
     <section class="page-body__footer footer" data-test="footer">
       <div class="footer__contacts-wrapper">

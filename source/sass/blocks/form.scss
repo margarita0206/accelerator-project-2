@@ -1,0 +1,159 @@
+.form {
+	background-image:
+	  image-set(
+			url("../../img/form-mobile@1x.webp") type("image/webp") 1x,
+			url("../../img/form-mobile@2x.webp") type("image/webp") 2x,
+      url("../../img/form-mobile@1x.jpg") type("image/jpg") 1x,
+      url("../../img/form-mobile@2x.jpg") type("image/jpg") 2x,
+		);
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-width: 320px;
+	height: 638px;
+  
+	@media (min-width: $tablet-width) {
+		background-image:
+	  image-set(
+			url("../../img/form-tablet@1x.webp") type("image/webp") 1x,
+			url("../../img/form-tablet@2x.webp") type("image/webp") 2x,
+      url("../../img/form-tablet@1x.jpg") type("image/jpg") 1x,
+      url("../../img/form-tablet@2x.jpg") type("image/jpg") 2x,
+		);
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-width: 768px;
+  height: 680px;
+	}
+
+	@media (min-width: $desktop-width) {
+		background-image:
+	  image-set(
+			url("../../img/form-desktop@1x.webp") type("image/webp") 1x,
+			url("../../img/form-desktop@2x.webp") type("image/webp") 2x,
+      url("../../img/form-desktop@1x.jpg") type("image/jpg") 1x,
+      url("../../img/form-desktop@2x.jpg") type("image/jpg") 2x,
+		);
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-width: 1440px;
+  height: 760px;
+	}
+
+  h2 {
+		@include font($primary-font, 22px, 22px, $white-color);
+    font-weight: 800;
+		text-align: center;
+		width: 258px;
+		margin: 0 0 20px;
+
+		@media (min-width: $tablet-width) {
+			@include font($primary-font, 25px, 25px, $white-color);
+      font-weight: 800;
+			width: 360px;
+			margin: 0 0 25px;
+		}
+
+		@media (min-width: $desktop-width) {
+      @include font($primary-font, 35px, 35px, $white-color);
+      font-weight: 800;
+			width: 1360px;
+			margin: 0 0 20px;
+		}
+	}
+
+  p {
+		@include font($primary-font, 12px, 18px, $white-color);
+    font-weight: 400;
+		text-align: center;
+		width: 258px;
+		margin: 0 0 20px;
+ 
+		@media (min-width: $tablet-width) {
+			@include font($primary-font, 16px, 24px, $white-color);
+      font-weight: 400;
+			width: 360px;
+			margin: 0 0 25px;
+		}
+
+		@media (min-width: $desktop-width) {
+			width: 1360px;
+			margin: 0 0 40px;
+		}
+	}
+
+	br {
+		@media (min-width: $tablet-width) {
+			display: none;
+		}
+	}
+}
+
+.form__container {
+	width: 258px;
+	padding-top: 174px;
+	margin: 0 auto;
+
+	@media (min-width: $tablet-width) {
+		width: 360px;
+		padding-top: 183px;
+	}
+
+	@media (min-width: $desktop-width) {
+		width: 1360px;
+		padding-top: 292px;
+	}
+}
+
+.form__input {
+	margin-bottom: 8px;
+	width: 258px;
+	height: 50px;
+	padding: 0 15px;
+	border: none;
+
+	@media (min-width: $tablet-width) {
+		width: 360px;
+		height: 56px;
+		padding: 0 30px;
+	}
+
+	@media (min-width: $desktop-width) {
+		margin: 0;
+	}
+}
+
+.form__button {
+	@include font($primary-font, 16px, 16px, $white-color);
+  font-weight: 500;
+	width: 258px;
+	min-height: 58px;
+	background-color: $blue-color;
+	border: none;
+	padding: 0 20px;
+
+	@media (min-width: $tablet-width) {
+		width: 360px;
+		min-height: 56px;
+	}
+
+	@media (min-width: $desktop-width) {
+		width: 180px;
+	}
+}
+
+.form__form-question {
+	display: block;
+	width: 258px;
+
+	@media (min-width: $tablet-width) {
+		width: 360px;
+	}
+
+	@media (min-width: $desktop-width) {
+		width: 960px;
+		margin: 0 auto;
+		display: flex;
+		flex-wrap: wrap;
+    column-gap: 30px;
+	}
+}
