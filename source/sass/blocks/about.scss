@@ -1,3 +1,16 @@
+.about {
+	width: 320px;
+
+	
+	@media(min-width: $tablet-width) {
+		width: 768px;
+	}
+
+	@media(min-width: $desktop-width) {
+		width: 1440px;
+	}
+}
+
 .about__text {
 	width: 290px;
 	margin: 0 auto;
@@ -59,7 +72,7 @@
 		}
 
 		@media (min-width: $desktop-width) {
-			width: 660px;
+			width: 585px;
 		}
 	}
 	
@@ -96,6 +109,7 @@
 	}
 
 	@media (min-width: $desktop-width) {
+		width: 1440px;
 		flex-wrap: wrap;
 		padding: 100px 0;
 	}
