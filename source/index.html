@@ -147,13 +147,240 @@
                 </div>
               </div>
             </div>
-            <div class="hero__pagination swiper-pagination"></div>
+            <div class="hero__swiper-pagination swiper-pagination"></div>
           </div>
         </div>
       </section>
   
       <section class="main__tours tours" data-test="tours">
-  
+        <div class="tours__container">
+          <div class="tours__tours-header slider-header">
+            <div class="slider-header__title-wrapper">
+              <h2 class="slider-header__title" title="Ближайшие туры">Ближайшие туры</h2>
+            </div>
+            <div class="slider-header__navigation swiper-navigation swiper-navigation--tours">
+              <button class="slider-header__swiper-button--prev swiper-button--prev slider-header__swiper-button swiper-button--tours-prev swiper-button" tabindex="0" type="button">
+                <span class="visually-hidden">Предыдущий слайд.</span>
+              </button>
+              <button class="slider-header__swiper-button--next swiper-button--next slider-header__swiper-button swiper-button--tours-next swiper-button" tabindex="0" type="button">
+                <span class="visually-hidden">Следующий слайд.</span>
+              </button>
+            </div>
+          </div>
+          <div class="tours__swiper swiper2">
+            <div class="tours__swiper-wrapper swiper-wrapper">
+              <div class="tours__tours-slide swiper-slide">
+                <div class="tours__picture">
+                  <picture>
+                    <source media="(min-width: 1440px)" width="380" height="416" type="image/webp"
+                    srcset="img/tours-desktop1@1x.webp 1x, img/tours-desktop1@2x.webp 2x">
+                    <source media="(min-width: 1440px)" width="380" height="416" type="image/jpg"
+                    srcset="img/tours-desktop1@1x.jpg 1x, img/tours-desktop1@2x.jpg 2x">
+                    <source media="(min-width: 768px)" width="330" height="416" type="image/webp"
+                    srcset="img/tours-tablet1@1x.webp 1x, img/tours-tablet1@2x.webp 2x">
+                    <source media="(min-width: 768px)" width="330" height="416" type="image/jpg"
+                    srcset="img/tours-tablet1@1x.jpg 1x, img/tours-tablet1@2x.jpg 2x">
+                    <source width="290" height="416" type="image/webp"
+                    srcset="img/tours-mobile1@1x.webp 1x, img/tours-mobile1@2x.webp 2x">
+                    <img class="tours__img" src="img/tours-mobile1@1x.jpg" width="290" height="416"
+                    srcset="img/tours-mobile1@1x.jpg 2x" alt="Путешествие
+                    вокруг Эльбруса." fetchpriority="high">
+                  </picture>
+                </div>
+                <div class="tours__wrapper">
+                  <div class="tours__location">
+                    <p class="tours__map">Кавказ</p>
+                  </div>
+                  <ul class="tours__list">
+                    <li class="tours__item">4 дня</li>
+                    <li class="tours__item">3 ночи</li>
+                  </ul>
+                </div>
+                <h3 class="tours__title">Путешествие вокруг Эльбруса</h3>
+                <div class="tours__info">
+                  <ul class="tours__list-info list-info">
+                    <li class="list-info__item">
+                      <p class="list-info__info">Сложность:</p>
+                      <div class="list-info__info-star">
+                        <span class="list-info__star"></span>
+                        <span class="list-info__star"></span>
+                        <span class="list-info__star"></span>
+                        <span class="list-info__star"></span>
+                        <span class="list-info__star"></span>
+                      </div>
+                    </li>
+                    <li class="list-info__item">
+                      <p class="list-info__info">Даты набора:</p>
+                      <p class="list-info__description">12.06–19.06</p>
+                    </li>
+                    <li class="list-info__item">
+                      <p class="list-info__info">Группа:</p>
+                      <p class="list-info__description">до 15 чел.</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="tours__tours-slide swiper-slide">
+                <div class="tours__picture">
+                  <picture>
+                    <source media="(min-width: 1440px)" width="380" height="416" type="image/webp"
+                    srcset="img/tours-desktop2@1x.webp 1x, img/tours-desktop2@2x.webp 2x">
+                    <source media="(min-width: 1440px)" width="380" height="416" type="image/jpg"
+                    srcset="img/tours-desktop2@1x.jpg 1x, img/tours-desktop2@2x.jpg 2x">
+                    <source media="(min-width: 768px)" width="330" height="416" type="image/webp"
+                    srcset="img/tours-tablet2@1x.webp 1x, img/tours-tablet2@2x.webp 2x">
+                    <source media="(min-width: 768px)" width="330" height="416" type="image/jpg"
+                    srcset="img/tours-tablet2@1x.jpg 1x, img/tours-tablet2@2x.jpg 2x">
+                    <source width="290" height="416" type="image/webp"
+                    srcset="img/tours-mobile2@1x.webp 1x, img/tours-mobile2@2x.webp 2x">
+                    <img class="tours__img" src="img/tours-mobile2@1x.jpg" width="290" height="416"
+                    srcset="img/tours-mobile2@1x.jpg 2x" alt="Путь к подножию
+                    Белухи." fetchpriority="high">
+                  </picture>
+                </div>
+                <div class="tours__wrapper">
+                  <div class="tours__location">
+                    <p class="tours__map">Алтай</p>
+                  </div>
+                  <ul class="tours__list">
+                    <li class="tours__item">14 дней</li>
+                    <li class="tours__item">13 ночей</li>
+                  </ul>
+                </div>
+                <h3 class="tours__title">Путь к подножию Белухи</h3>
+                <div class="tours__info">
+                  <ul class="tours__list-info list-info">
+                    <li class="list-info__item">
+                      <p class="list-info__info">Сложность:</p>
+                      <div class="list-info__info-star">
+                        <span class="list-info__star"></span>
+                        <span class="list-info__star"></span>
+                        <span class="list-info__star"></span>
+                        <span class="list-info__star"></span>
+                        <span class="list-info__star"></span>
+                      </div>
+                    </li>
+                    <li class="list-info__item">
+                      <p class="list-info__info">Даты набора:</p>
+                      <p class="list-info__description">14.06–23.06</p>
+                    </li>
+                    <li class="list-info__item">
+                      <p class="list-info__info">Группа:</p>
+                      <p class="list-info__description">до 25 чел.</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="tours__tours-slide swiper-slide">
+                <div class="tours__picture">
+                  <picture>
+                    <source media="(min-width: 1440px)" width="380" height="416" type="image/webp"
+                    srcset="img/tours-desktop3@1x.webp 1x, img/tours-desktop3@2x.webp 2x">
+                    <source media="(min-width: 1440px)" width="380" height="416" type="image/jpg"
+                    srcset="img/tours-desktop3@1x.jpg 1x, img/tours-desktop3@2x.jpg 2x">
+                    <source media="(min-width: 768px)" width="330" height="416" type="image/webp"
+                    srcset="img/tours-tablet3@1x.webp 1x, img/tours-tablet3@2x.webp 2x">
+                    <source media="(min-width: 768px)" width="330" height="416" type="image/jpg"
+                    srcset="img/tours-tablet3@1x.jpg 1x, img/tours-tablet3@2x.jpg 2x">
+                    <source width="290" height="416" type="image/webp"
+                    srcset="img/tours-mobile3@1x.webp 1x, img/tours-mobile3@2x.webp 2x">
+                    <img class="tours__img" src="img/tours-mobile3@1x.jpg" width="290" height="416"
+                    srcset="img/tours-mobile3@1x.jpg 2x" alt="Через Фишт
+                    к Чёрному морю и обратно." fetchpriority="high">
+                  </picture>
+                </div>
+                <div class="tours__wrapper">
+                  <div class="tours__location">
+                    <p class="tours__map">Кавказ</p>
+                  </div>
+                  <ul class="tours__list">
+                    <li class="tours__item">7 дней</li>
+                    <li class="tours__item">6 ночей</li>
+                  </ul>
+                </div>
+                <h3 class="tours__title">Через Фишт к Чёрному морю и обратно</h3>
+                <div class="tours__info">
+                  <ul class="tours__list-info list-info">
+                    <li class="list-info__item">
+                      <p class="list-info__info">Сложность:</p>
+                      <div class="list-info__info-star">
+                        <span class="list-info__star"></span>
+                        <span class="list-info__star"></span>
+                        <span class="list-info__star"></span>
+                        <span class="list-info__star"></span>
+                        <span class="list-info__star"></span>
+                      </div>
+                    </li>
+                    <li class="list-info__item">
+                      <p class="list-info__info">Даты набора:</p>
+                      <p class="list-info__description">15.07–19.07</p>
+                    </li>
+                    <li class="list-info__item">
+                      <p class="list-info__info">Группа:</p>
+                      <p class="list-info__description">до 22 чел.</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="tours__tours-slide swiper-slide">
+                <div class="tours__picture">
+                  <picture>
+                    <source media="(min-width: 1440px)" width="380" height="416" type="image/webp"
+                    srcset="img/tours-desktop4@1x.webp 1x, img/tours-desktop4@2x.webp 2x">
+                    <source media="(min-width: 1440px)" width="380" height="416" type="image/jpg"
+                    srcset="img/tours-desktop4@1x.jpg 1x, img/tours-desktop4@2x.jpg 2x">
+                    <source media="(min-width: 768px)" width="330" height="416" type="image/webp"
+                    srcset="img/tours-tablet4@1x.webp 1x, img/tours-tablet4@2x.webp 2x">
+                    <source media="(min-width: 768px)" width="330" height="416" type="image/jpg"
+                    srcset="img/tours-tablet4@1x.jpg 1x, img/tours-tablet4@2x.jpg 2x">
+                    <source width="290" height="416" type="image/webp"
+                    srcset="img/tours-mobile4@1x.webp 1x, img/tours-mobile4@2x.webp 2x">
+                    <img class="tours__img" src="img/tours-mobile3@1x.jpg" width="290" height="416"
+                    srcset="img/tours-mobile4@1x.jpg 2x" alt="Восхождение 
+                    Манарага." fetchpriority="high">
+                  </picture>
+                </div>
+                <div class="tours__wrapper">
+                  <div class="tours__location">
+                    <p class="tours__map">Урал</p>
+                  </div>
+                  <ul class="tours__list">
+                    <li class="tours__item">9 дней</li>
+                    <li class="tours__item">10 ночей</li>
+                  </ul>
+                </div>
+                <h3 class="tours__title">Восхождение Манарага</h3>
+                <div class="tours__info">
+                  <ul class="tours__list-info list-info">
+                    <li class="list-info__item">
+                      <p class="list-info__info">Сложность:</p>
+                      <div class="list-info__info-star">
+                        <span class="list-info__star"></span>
+                        <span class="list-info__star"></span>
+                        <span class="list-info__star"></span>
+                        <span class="list-info__star"></span>
+                        <span class="list-info__star"></span>
+                      </div>
+                    </li>
+                    <li class="list-info__item">
+                      <p class="list-info__info">Даты набора:</p>
+                      <p class="list-info__description">12.07–19.07</p>
+                    </li>
+                    <li class="list-info__item">
+                      <p class="list-info__info">Группа:</p>
+                      <p class="list-info__description">до 7 чел.</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tours__link-wrapper">
+            <a class="tours__link" href="#">
+              <p class="tours__link-content">Показать все туры</p>
+            </a>
+          </div>
+        </div>
       </section>
   
       <section class="main__training training" data-test="training">
