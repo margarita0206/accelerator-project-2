@@ -1,0 +1,75 @@
+.slider-header__navigation {
+	display: none;
+
+	@media (min-width: $tablet-width) {
+		display: block;
+		width: 339px;
+		min-height: 35px;
+		padding-top: 20px;
+		display: flex;
+		flex-wrap: wrap;
+		column-gap: 4px;
+		justify-content: flex-end;
+	}
+}
+
+.slider-header__swiper-button {
+	width: 37px;
+	height: 35px;
+	background-color: $blue-color;
+	border: none;
+	position: relative;
+
+	&--disabled {
+		background-color: #999999;
+	}
+
+	&--prev::before {
+    content: "";
+		position: absolute;
+		width: 37px;
+		height: 35px;
+		display: block;
+		mask-image: url("../../__spritemap#sprite-arrow-left-tour-view");
+		mask-repeat: no-repeat;
+		mask-size: 15px 10px;
+		background-color: $white-color;
+		top: 13px;
+		left: 10px;
+	}
+
+	&--next::before {
+		content: "";
+		position: absolute;
+		width: 37px;
+		height: 35px;
+		display: block;
+		mask-image: url("../../__spritemap#sprite-arrow-right-tour-view");
+		mask-repeat: no-repeat;
+		mask-size: 15px 10px;
+		background-color: $white-color;
+		top: 13px;
+		left: 12px;
+	}
+}
+
+.slider-header__title {
+	@include font($primary-font, 22px, 22px, $primary-color);
+  font-weight: 800;
+	margin: 0 0 42px;
+	padding-top: 16px;
+
+	@media (min-width: $tablet-width) {
+		@include font($primary-font, 25px, 25px, $primary-color);
+    font-weight: 800;
+		margin: 0 0 40px;
+		padding-top: 20px;
+	}
+
+	@media (min-width: $desktop-width) {
+		@include font($primary-font, 55px, 55px, $primary-color);
+    font-weight: 800;
+		margin:  0 0 53px;
+		padding-top: 0;
+	}
+}

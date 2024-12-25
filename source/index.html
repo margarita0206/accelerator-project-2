@@ -153,6 +153,7 @@
       </section>
   
       <section class="main__tours tours" data-test="tours">
+        <div class="tours__background"></div>
         <div class="tours__container">
           <div class="tours__tours-header slider-header">
             <div class="slider-header__title-wrapper">
@@ -187,37 +188,39 @@
                     вокруг Эльбруса." fetchpriority="high">
                   </picture>
                 </div>
-                <div class="tours__wrapper">
-                  <div class="tours__location">
-                    <p class="tours__map">Кавказ</p>
+                <div class="tours__content-wrapper">
+                  <div class="tours__wrapper">
+                    <div class="tours__location">
+                      <p class="tours__map">Кавказ</p>
+                    </div>
+                    <ul class="tours__list">
+                      <li class="tours__item tours__item--sun">4 дня</li>
+                      <li class="tours__item tours__item--moon">3 ночи</li>
+                    </ul>
                   </div>
-                  <ul class="tours__list">
-                    <li class="tours__item">4 дня</li>
-                    <li class="tours__item">3 ночи</li>
-                  </ul>
-                </div>
-                <h3 class="tours__title">Путешествие вокруг Эльбруса</h3>
-                <div class="tours__info">
-                  <ul class="tours__list-info list-info">
-                    <li class="list-info__item">
-                      <p class="list-info__info">Сложность:</p>
-                      <div class="list-info__info-star">
-                        <span class="list-info__star"></span>
-                        <span class="list-info__star"></span>
-                        <span class="list-info__star"></span>
-                        <span class="list-info__star"></span>
-                        <span class="list-info__star"></span>
-                      </div>
-                    </li>
-                    <li class="list-info__item">
-                      <p class="list-info__info">Даты набора:</p>
-                      <p class="list-info__description">12.06–19.06</p>
-                    </li>
-                    <li class="list-info__item">
-                      <p class="list-info__info">Группа:</p>
-                      <p class="list-info__description">до 15 чел.</p>
-                    </li>
-                  </ul>
+                  <h3 class="tours__title">Путешествие вокруг Эльбруса</h3>
+                  <div class="tours__info">
+                    <ul class="tours__list-info list-info">
+                      <li class="list-info__item list-info__item--star">
+                        <p class="list-info__info">Сложность:</p>
+                        <div class="list-info__info-star">
+                          <span class="list-info__star"></span>
+                          <span class="list-info__star"></span>
+                          <span class="list-info__star"></span>
+                          <span class="list-info__star"></span>
+                          <span class="list-info__star-none"></span>
+                        </div>
+                      </li>
+                      <li class="list-info__item list-info__item--date">
+                        <p class="list-info__info">Даты набора:</p>
+                        <p class="list-info__description">12.06–19.06</p>
+                      </li>
+                      <li class="list-info__item list-info__item--quantity">
+                        <p class="list-info__info">Группа:</p>
+                        <p class="list-info__description">до 15 чел.</p>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
               <div class="tours__tours-slide swiper-slide">
@@ -238,37 +241,39 @@
                     Белухи." fetchpriority="high">
                   </picture>
                 </div>
-                <div class="tours__wrapper">
-                  <div class="tours__location">
-                    <p class="tours__map">Алтай</p>
+                <div class="tours__content-wrapper tours__content-wrapper--two">
+                  <div class="tours__wrapper tours__wrapper--two">
+                    <div class="tours__location">
+                      <p class="tours__map tours__map--two">Алтай</p>
+                    </div>
+                    <ul class="tours__list">
+                      <li class="tours__item tours__item--sun">14 дней</li>
+                      <li class="tours__item tours__item--moon">13 ночей</li>
+                    </ul>
                   </div>
-                  <ul class="tours__list">
-                    <li class="tours__item">14 дней</li>
-                    <li class="tours__item">13 ночей</li>
-                  </ul>
-                </div>
-                <h3 class="tours__title">Путь к подножию Белухи</h3>
-                <div class="tours__info">
-                  <ul class="tours__list-info list-info">
-                    <li class="list-info__item">
-                      <p class="list-info__info">Сложность:</p>
-                      <div class="list-info__info-star">
-                        <span class="list-info__star"></span>
-                        <span class="list-info__star"></span>
-                        <span class="list-info__star"></span>
-                        <span class="list-info__star"></span>
-                        <span class="list-info__star"></span>
-                      </div>
-                    </li>
-                    <li class="list-info__item">
-                      <p class="list-info__info">Даты набора:</p>
-                      <p class="list-info__description">14.06–23.06</p>
-                    </li>
-                    <li class="list-info__item">
-                      <p class="list-info__info">Группа:</p>
-                      <p class="list-info__description">до 25 чел.</p>
-                    </li>
-                  </ul>
+                  <h3 class="tours__title">Путь к подножию Белухи</h3>
+                  <div class="tours__info">
+                    <ul class="tours__list-info list-info">
+                      <li class="list-info__item list-info__item--star">
+                        <p class="list-info__info">Сложность:</p>
+                        <div class="list-info__info-star">
+                          <span class="list-info__star"></span>
+                          <span class="list-info__star"></span>
+                          <span class="list-info__star"></span>
+                          <span class="list-info__star"></span>
+                          <span class="list-info__star-none"></span>
+                        </div>
+                      </li>
+                      <li class="list-info__item list-info__item--date">
+                        <p class="list-info__info">Даты набора:</p>
+                        <p class="list-info__description">14.06–23.06</p>
+                      </li>
+                      <li class="list-info__item list-info__item--quantity">
+                        <p class="list-info__info">Группа:</p>
+                        <p class="list-info__description">до 25 чел.</p>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
               <div class="tours__tours-slide swiper-slide">
@@ -289,37 +294,39 @@
                     к Чёрному морю и обратно." fetchpriority="high">
                   </picture>
                 </div>
-                <div class="tours__wrapper">
-                  <div class="tours__location">
-                    <p class="tours__map">Кавказ</p>
+                <div class="tours__content-wrapper tours__content-wrapper--free">
+                  <div class="tours__wrapper tours__wrapper--free">
+                    <div class="tours__location">
+                      <p class="tours__map tours__map--free">Адыгея</p>
+                    </div>
+                    <ul class="tours__list">
+                      <li class="tours__item tours__item--sun">7 дней</li>
+                      <li class="tours__item tours__item--moon">6 ночей</li>
+                    </ul>
                   </div>
-                  <ul class="tours__list">
-                    <li class="tours__item">7 дней</li>
-                    <li class="tours__item">6 ночей</li>
-                  </ul>
-                </div>
-                <h3 class="tours__title">Через Фишт к Чёрному морю и обратно</h3>
-                <div class="tours__info">
-                  <ul class="tours__list-info list-info">
-                    <li class="list-info__item">
-                      <p class="list-info__info">Сложность:</p>
-                      <div class="list-info__info-star">
-                        <span class="list-info__star"></span>
-                        <span class="list-info__star"></span>
-                        <span class="list-info__star"></span>
-                        <span class="list-info__star"></span>
-                        <span class="list-info__star"></span>
-                      </div>
-                    </li>
-                    <li class="list-info__item">
-                      <p class="list-info__info">Даты набора:</p>
-                      <p class="list-info__description">15.07–19.07</p>
-                    </li>
-                    <li class="list-info__item">
-                      <p class="list-info__info">Группа:</p>
-                      <p class="list-info__description">до 22 чел.</p>
-                    </li>
-                  </ul>
+                  <h3 class="tours__title">Через Фишт к Чёрному морю и обратно</h3>
+                  <div class="tours__info">
+                    <ul class="tours__list-info list-info">
+                      <li class="list-info__item list-info__item--star">
+                        <p class="list-info__info">Сложность:</p>
+                        <div class="list-info__info-star">
+                          <span class="list-info__star"></span>
+                          <span class="list-info__star"></span>
+                          <span class="list-info__star"></span>
+                          <span class="list-info__star"></span>
+                          <span class="list-info__star-none"></span>
+                        </div>
+                      </li>
+                      <li class="list-info__item list-info__item--date">
+                        <p class="list-info__info">Даты набора:</p>
+                        <p class="list-info__description">15.07–19.07</p>
+                      </li>
+                      <li class="list-info__item list-info__item--quantity">
+                        <p class="list-info__info">Группа:</p>
+                        <p class="list-info__description">до 22 чел.</p>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
               <div class="tours__tours-slide swiper-slide">
@@ -340,37 +347,39 @@
                     Манарага." fetchpriority="high">
                   </picture>
                 </div>
-                <div class="tours__wrapper">
-                  <div class="tours__location">
-                    <p class="tours__map">Урал</p>
+                <div class="tours__content-wrapper">
+                  <div class="tours__wrapper">
+                    <div class="tours__location">
+                      <p class="tours__map">Урал</p>
+                    </div>
+                    <ul class="tours__list tours__list--for">
+                      <li class="tours__item tours__item--sun">9 дней</li>
+                      <li class="tours__item tours__item--moon">10 ночей</li>
+                    </ul>
                   </div>
-                  <ul class="tours__list">
-                    <li class="tours__item">9 дней</li>
-                    <li class="tours__item">10 ночей</li>
-                  </ul>
-                </div>
-                <h3 class="tours__title">Восхождение Манарага</h3>
-                <div class="tours__info">
-                  <ul class="tours__list-info list-info">
-                    <li class="list-info__item">
-                      <p class="list-info__info">Сложность:</p>
-                      <div class="list-info__info-star">
-                        <span class="list-info__star"></span>
-                        <span class="list-info__star"></span>
-                        <span class="list-info__star"></span>
-                        <span class="list-info__star"></span>
-                        <span class="list-info__star"></span>
-                      </div>
-                    </li>
-                    <li class="list-info__item">
-                      <p class="list-info__info">Даты набора:</p>
-                      <p class="list-info__description">12.07–19.07</p>
-                    </li>
-                    <li class="list-info__item">
-                      <p class="list-info__info">Группа:</p>
-                      <p class="list-info__description">до 7 чел.</p>
-                    </li>
-                  </ul>
+                  <h3 class="tours__title">Восхождение Манарага</h3>
+                  <div class="tours__info">
+                    <ul class="tours__list-info list-info">
+                      <li class="list-info__item list-info__item--star">
+                        <p class="list-info__info">Сложность:</p>
+                        <div class="list-info__info-star">
+                          <span class="list-info__star"></span>
+                          <span class="list-info__star"></span>
+                          <span class="list-info__star"></span>
+                          <span class="list-info__star"></span>
+                          <span class="list-info__star"></span>
+                        </div>
+                      </li>
+                      <li class="list-info__item list-info__item--date">
+                        <p class="list-info__info">Даты набора:</p>
+                        <p class="list-info__description">12.07–19.07</p>
+                      </li>
+                      <li class="list-info__item list-info__item--quantity">
+                        <p class="list-info__info">Группа:</p>
+                        <p class="list-info__description">до 7 чел.</p>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>

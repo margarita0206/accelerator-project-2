@@ -1,0 +1,256 @@
+.tours {
+	position: relative;
+}
+
+.tours__background {
+	position: absolute;
+	z-index: -1;
+	width: 320px;
+	height: 595px;
+	top: 310px;
+	right: 0;
+	background-image: 
+	  image-set(
+			url("../../img/about-background-mobile@1x.png") 1x,
+			url("../../img/about-background-mobile@2x.png") 2x,
+			url("../../img/about-background-mobile@1x.webp") 1x,
+			url("../../img/about-background-mobile@2x.webp") 2x
+		);
+	background-size: 320px 595px;
+	background-repeat: no-repeat;
+	background-position: cover;
+}
+
+.tours__link-content {
+	@include font($primary-font, 14px, 14px, $primary-color);
+  font-weight: 700;
+	letter-spacing: 4%;
+	text-transform: uppercase;
+	width: 212px;
+	min-height: 34px;
+	text-align: center;
+	padding: 10px 28px 0 0;
+	margin: 0 auto;
+	position: relative;
+	cursor: pointer;
+
+	&::before {
+		content: "";
+		position: absolute;
+		display: block;
+		width: 15px;
+		height: 10px;
+		background-image: url("../../__spritemap#sprite-right-arrow-view");
+		background-repeat: no-repeat;
+		background-size: 15px 10px;
+		top: 12px;
+		right: 15px;
+	}
+}
+
+.tours__swiper {
+	width: 290px;
+	height: 416px;
+	margin-bottom: 25px;
+	overflow: hidden;
+
+	@media (min-width: $tablet-width) {
+		width: 678px;
+	}
+}
+
+.tours__container {
+  width: 290px;
+	padding: 20px 0;
+	margin: 0 auto;
+
+	@media (min-width: $tablet-width) {
+		width: 678px;
+		padding: 40px 0;
+	}
+
+	@media (min-width: $desktop-width) {
+		width: 1200px;
+		padding: 100px 0;
+	}
+}
+
+.tours__tours-header {
+	display: flex;
+}
+
+.tours__link {
+	text-decoration: none;
+}
+
+.tours__list {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 14px;
+
+	&--for {
+		column-gap: 8px;
+	}
+}
+
+.tours__wrapper {
+	display: flex;
+  column-gap: 5px;
+
+	&--two {
+		display: block;
+	}
+
+	&--free {
+		display: block;
+	}
+
+	@media (min-width: $tablet-width) {
+		&--two {
+			display: flex;
+		}
+
+		&--free {
+			display: flex;
+		}
+	}
+}
+
+.tours__map {
+	@include font($primary-font, 12px, 12px, $white-color);
+  font-weight: 500;
+	margin: 0;
+	padding: 8px 12px 8px 34px;
+	background-color: $blue-color;
+	position: relative;
+
+  &::before {
+		content: "";
+    position: absolute;
+		width: 20px;
+		height: 20px;
+		display: block;
+		background-image: url("../../__spritemap#sprite-pin-view");
+		background-repeat: no-repeat;
+		background-size: 9px 12px;
+		left: 13px;
+		top: 7px;
+	}
+
+	&--two {
+		width: 85px;
+		margin-bottom: 12px;
+	}
+
+	&--free {
+		width: 94px;
+		margin-bottom: 12px;
+	}
+
+	@media (min-width: $tablet-width) {
+		&--two {
+			margin-bottom: 0;
+		}
+	
+		&--free {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.tours__item {
+	@include font($primary-font, 12px, 12px, $white-color);
+  font-weight: 500;
+	padding: 4px 0 4px 32px;
+	align-self: center;
+	position: relative;
+
+	&--moon::before {
+    content: "";
+    position: absolute;
+		width: 20px;
+		height: 20px;
+		display: block;
+		background-image: url("../../__spritemap#sprite-moon-view");
+		background-repeat: no-repeat;
+		background-size: 16px 16px;
+		left: 0;
+		top: 0;
+	}
+
+	&--sun::before {
+    content: "";
+    position: absolute;
+		width: 20px;
+		height: 20px;
+		display: block;
+		background-image: url("../../__spritemap#sprite-sun-view");
+		background-repeat: no-repeat;
+		background-size: 16px 16px;
+		left: 0;
+		top: 0;
+	}
+}
+
+.tours__title {
+	@include font($primary-font, 24px, 28px, $white-color);
+  font-weight: 700;
+	width: 260px;
+	margin: 15px 0 31px;
+
+	@media (min-width: $tablet-width) {
+		width: 270px;
+	}
+}
+
+.slider-header__title-wrapper {
+	@media (min-width: $tablet-width) {
+		width: 339px;
+	}
+}
+
+.tours__tours-slide {
+	position: relative;
+}
+
+.tours__swiper-wrapper {
+	display: flex;
+	width: fit-content;
+}
+
+.tours__content-wrapper {
+	width: 290px;
+	height: 416px;
+	margin: 0;
+	position: absolute;
+	z-index: 10;
+	top: 0;
+	padding: 224px 20px 30px 20px;
+
+	&--two {
+		padding: 192px 20px 30px 20px;
+	}
+
+	&--free {
+		padding: 164px 20px 30px 20px;
+	}
+
+	@media (min-width: $tablet-width) {
+		width: 330px;
+
+		&--two {
+			padding: 224px 20px 30px 20px;
+		}
+	
+		&--free {
+			padding: 192px 20px 30px 20px;
+		}
+	}
+}
+
+.tours__img {
+	display: block;
+}
