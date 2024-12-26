@@ -2,6 +2,7 @@
 // import Swiper from "swiper";
 // import {Navigation, Pagination} from "swiper/modules";
 // import 'swiper/css';
-import { toursSwiper } from './swiper';
+import { toursSwiper, reviewsSwiper } from './swiper';
 
 toursSwiper.init();
+reviewsSwiper.init();

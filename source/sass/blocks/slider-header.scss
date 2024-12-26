@@ -11,6 +11,10 @@
 		column-gap: 4px;
 		justify-content: flex-end;
 	}
+
+	@media (min-width: $desktop-width) {
+		width: 78px;
+	}
 }
 
 .slider-header__swiper-button {
@@ -19,6 +23,7 @@
 	background-color: $blue-color;
 	border: none;
 	position: relative;
+	cursor: pointer;
 
 	&--disabled {
 		background-color: #999999;
@@ -71,5 +76,16 @@
     font-weight: 800;
 		margin:  0 0 53px;
 		padding-top: 0;
+	}
+}
+
+.slider-header__title-wrapper {
+	@media (min-width: $tablet-width) {
+		width: 339px;
+	}
+
+	@media (min-width: $desktop-width) {
+		width: 1122px;
+		padding-right: 580px;
 	}
 }
