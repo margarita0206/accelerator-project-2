@@ -130,6 +130,7 @@
 	background-color: $blue-color;
 	border: none;
 	padding: 0 20px;
+	cursor: pointer;
 
 	@media (min-width: $tablet-width) {
 		width: 360px;
