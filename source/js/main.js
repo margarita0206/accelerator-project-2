@@ -2,7 +2,11 @@
 // import Swiper from "swiper";
 // import {Navigation, Pagination} from "swiper/modules";
 // import 'swiper/css';
-import { toursSwiper, reviewsSwiper } from './swiper';
+import { toursSwiper, reviewsSwiper, handleAdvSwiper } from './swiper';
 
-toursSwiper.init();
-reviewsSwiper.init();
+window.addEventListener('DOMContentLoaded', () => {
+  toursSwiper.init();
+  reviewsSwiper.init();
+  handleAdvSwiper();
+}
+);

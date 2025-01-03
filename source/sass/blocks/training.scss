@@ -1,19 +1,23 @@
 .training {
-	width: 290px;
+	width: 320px;
+  padding: 20px 15px;
 	margin: 0 auto;
 
 	@media (min-width: $tablet-width) {
-		width: 678px;
+		width: 768px;
+    padding: 40px 45px;
 	}
 
 	@media (min-width: $desktop-width) {
-		width: 1200px;
+		width: 1440px;
+    padding: 40px 120px;
 	}
 	
 	p {
 		@include font($primary-font, 14px, 20px, $primary-color);
     font-weight: 400;
 		width: 290px;
+		margin-bottom: 29px;
 	}
 
 	@media (min-width: $tablet-width) {
@@ -21,24 +25,247 @@
 			@include font($primary-font, 16px, 24px, $primary-color);
 			font-weight: 400;
 			width: 678px;
+			margin-bottom: 27px;
 		}
 	}
 
 	@media (min-width: $desktop-width) {
 		p {
 			width: 820px;
+			margin-bottom: 54px;
 		}
 	}
 }
 
 .training__title {
+	margin-bottom: 17px;
+  padding-top: 17px;
+  padding-bottom: 16px;
 	text-align: left;
 
 	@media (min-width: $tablet-width) {
-		padding-top: 20px;
+		padding: 20px 0 10px;
+    margin-bottom: 24px;
 	}
 
 	@media (min-width: $desktop-width) {
-		padding-top: 19px;
+		padding: 23px 0 1px;
+    margin-bottom: 31px;
 	}
+
+	&::after {
+		bottom: 13px;
+	
+		@media (min-width: $desktop-width) {
+			bottom: 0;
+		}
+	}
+}
+
+.training__heading {
+  margin: 0;
+	padding: 0;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
+  margin-bottom: 23px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 18px;
+    margin-bottom: 100px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 21px;
+    line-height: 21px;
+    margin-bottom: 19px;
+  }
+}
+
+.training__list {
+  margin: 0;
+	padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 104px;
+    column-gap: 134px;
+  }
+
+	@media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 0;
+    row-gap: 30px;
+  }
+
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: 6px;
+    width: 2px;
+    height: calc(100% - 36px);
+    background-color: $blue-color;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: block;
+      top: auto;
+      left: 20px;
+      bottom: 12px;
+      width: 1180px;
+      height: 2px;
+    }
+  }
+}
+
+.training__item {
+  min-height: 30px;
+  width: 260px;
+  padding-left: 63px;
+  font-size: 12px;
+  line-height: 18px;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    width: 232px;
+    padding-left: 35px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: auto;
+    padding: 8px 0 22px 45px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &--map {
+    @media (min-width: $tablet-width) {
+      grid-area: 1 / 1 / 2 / 2;
+    }
+  }
+
+  &--boots {
+    @media (min-width: $tablet-width) {
+      grid-area: 2 / 1 / 3 / 2;
+    }
+
+    @media (min-width: $desktop-width) {
+      grid-area: 1 / 2 / 2 / 3;
+    }
+  }
+
+  &--tree {
+    @media (min-width: $tablet-width) {
+      grid-area: 2 / 2 / 3 / 3;
+    }
+
+    @media (min-width: $desktop-width) {
+      grid-area: 1 / 3 / 2 / 4;
+    }
+  }
+
+  &--mountain {
+    @media (min-width: $tablet-width) {
+      grid-area: 1 / 2 / 2 / 3;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 440px;
+      padding: 8px 200px 22px 45px;
+      grid-area: 1 / 4 / 2 / 5;
+    }
+  }
+
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 19px;
+    left: 0;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+    background-color: $blue-color;
+    border-radius: 50%;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: block;
+      bottom: -1px;
+      top: auto;
+      left: 20px;
+    }
+  }
+
+  &--tree::after {
+    left: 0;
+  }
+
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: 29px;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    background-color: $primary-color;
+    mask-size: 25px 25px;
+    mask-repeat: no-repeat;
+    mask-position: 50% 50%;
+
+    @media (min-width: $tablet-width) {
+      left: 0;
+      top: 15px;
+    }
+
+    @media (min-width: $desktop-width) {
+      left: 10px;
+      top: 10px;
+      transform: translateY(0);
+    }
+  }
+
+  &--map::before {
+    mask-image: url("../../__spritemap#sprite-map-trainers-view");
+  }
+
+  &--boots::before {
+    mask-image: url("../../__spritemap#sprite-boots-trainers-view");
+    mask-size: 27px 27px;
+  }
+
+  &--tree::before {
+    mask-image: url("../../__spritemap#sprite-elka-trainers-view");
+  }
+
+  &--mountain::before {
+    mask-image: url("../../__spritemap#sprite-mountain-trainers-view");
+  }
+}
+
+
+.training__item br {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
 }
