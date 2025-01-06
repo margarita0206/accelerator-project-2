@@ -147,7 +147,7 @@
                 </div>
               </div>
             </div>
-            <div class="hero__swiper-pagination swiper-pagination"></div>
+            <div class="hero__swiper-pagination hero__swiper-pagination-bullet swiper-pagination"></div>
           </div>
         </div>
       </section>
@@ -395,23 +395,25 @@
       <section class="main__training training" data-test="training">
         <div class="training__wrapper">
           <h2 class="training__title title" title="Обучение">Обучение</h2>
-          <p>Обучение проводится квалифицированными специалистами, за&nbsp;плечами&nbsp;которых десятки пройденных
+          <p>Обучение проводится квалифицированными специалистами, за плечами которых десятки пройденных
             маршрутов
             Кавказа, Крыма, Гималаев, Эльбруса, Алтая, Карелии, Адыгеи и других.
           </p>
           <div class="training__coach coach">
             <div class="coach__title-wrapper">
               <h3 class="coach__title">Наши инструкторы</h3>
-              <button class="coach__button-swiper coach__button-swiper--prev button-swiper button-swiper--prev"
-                type="button">
-                <span class="visually-hidden">Предыдущий слайд.</span>
-              </button>
-              <button class="coach__button-swiper coach__button-swiper--next button-swiper button-swiper--next"
-                type="button">
-                <span class="visually-hidden">Следующий слайд.</span>
-              </button>
+              <div class="coach__button-wrapper">
+                <button class="coach__button-swiper coach__button-swiper--prev button-swiper button-swiper--prev"
+                  type="button">
+                  <span class="visually-hidden">Предыдущий слайд.</span>
+                </button>
+                <button class="coach__button-swiper coach__button-swiper--next button-swiper button-swiper--next"
+                  type="button">
+                  <span class="visually-hidden">Следующий слайд.</span>
+                </button>
+              </div>
             </div>
-            <div class="coach__swiper swiper">
+            <div class="coach__swiper swiper3">
               <ul class="coach__list swiper-wrapper">
                 <li class="coach__item swiper-slide" tabindex="0">
                   <div class="coach__picture-wrapper">
@@ -835,10 +837,10 @@
           <p>Заполните форму и наш оператор<br> свяжется<br> с вами для консультации.</p>
           <div class="form__wrapper">
             <form class="form__form-question" method="post" action="https://echo.htmlacademy.ru">
-              <label class="visually-hidden" for="phone">Введите ваш номер телефона</label>
-              <input class="form__input" type="tel" name="phone" id="phone" pattern="[0-9]+" placeholder="Телефон" required>
-              <label class="visually-hidden" for="email">Введите ваш email</label>
-                <input class="form__input" type="text" name="email" id="email" pattern="[а-яА-ЯёЁa-zA-Z\s]+" placeholder="Email" required>
+              <label class="form__label" for="tel">Телефон</label>
+              <input class="form__input" type="tel" name="tel" id="tel" pattern="\+?[0-9\s\-\(\)]+" minlength="11" maxlength="13" placeholder="Телефон" required>
+              <label class="form__label" for="email">Email</label>
+              <input class="form__input" type="text" name="email" id="email" pattern=" /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-zа-яё]{2,4}$/i" placeholder="Email" required>
               <button class="form__button" type="submit">Отправить</button>
             </form>
           </div>

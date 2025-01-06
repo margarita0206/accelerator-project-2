@@ -36,11 +36,39 @@
 		}
 
 		@media(min-width: $tablet-width) {
+			@include font($primary-font, 25px, 25px, $primary-color);
+      font-weight: 800;
 			margin: 0 0 46px;
+
+			&::before {
+				content: attr(title);
+				position: absolute;
+				z-index: -1;
+				color: rgba(45, 56, 63, 0.03);
+				font-size: 40px;
+				line-height: 40px;
+				left: 0;
+				top: -15px;
+				width: 542px;
+			}
 		}
 
 		@media(min-width: $desktop-width) {
+			@include font($primary-font, 35px, 35px, $primary-color);
+      font-weight: 800;
 			margin: 0 0 57px;
+
+			&::before {
+				content: attr(title);
+				position: absolute;
+				z-index: -1;
+				color: rgba(45, 56, 63, 0.03);
+				font-size: 55px;
+				line-height: 55px;
+				left: 0;
+				top: -38px;
+				width: 542px;
+			}
 		}
 	}
 

@@ -122,6 +122,10 @@
 	}
 }
 
+.form__label {
+	display: none;
+}
+
 .form__button {
 	@include font($primary-font, 16px, 16px, $white-color);
   font-weight: 500;

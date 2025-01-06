@@ -15,18 +15,62 @@
 }
 
 .adv__title {
+	@include font($primary-font, 22px, 22px, $primary-color);
+	font-weight: 800;
 	width: 290px;
 	text-align: center;
 	padding: 20px 0 60px;
+	position: relative;
+	z-index: 1;
+
+	&::before {
+		content: attr(title);
+		position: absolute;
+		z-index: -1;
+		color: rgba(45, 56, 63, 0.03);
+		font-size: 26px;
+		line-height: 26px;
+		left: 0;
+		top: 7px;
+		width: 290px;
+	}
 
 	@media (min-width: $tablet-width) {
+		@include font($primary-font, 25px, 25px, $primary-color);
+	  font-weight: 800;
 		width: 678px;
+
+		&::before {
+			content: attr(title);
+			position: absolute;
+			z-index: -1;
+			color: rgba(45, 56, 63, 0.03);
+			font-size: 40px;
+			line-height: 40px;
+			left: 70px;
+			top: 4px;
+			width: 542px;
+		}
 	}
 
 	@media (min-width: $desktop-width) {
+		@include font($primary-font, 35px, 35px, $primary-color);
+	  font-weight: 800;
 		width: 1200px;
 		margin: 0 auto;
 		padding: 0 0 50px;
+
+		&::before {
+			content: attr(title);
+			position: absolute;
+			z-index: -1;
+			color: rgba(45, 56, 63, 0.03);
+			font-size: 55px;
+			line-height: 55px;
+			left: 330px;
+			top: -24px;
+			width: 542px;
+		}
 	}
 }
 

@@ -1,3 +1,16 @@
+.coach {
+  max-width: 290px;
+  overflow: hidden;
+
+  @media (min-width: $tablet-width) {
+		max-width: 678px;
+	}
+
+	@media (min-width: $desktop-width) {
+		max-width: 1200px;
+	}
+}
+
 .coach__title-wrapper {
 	display: flex;
   align-items: center;
@@ -14,6 +27,8 @@
 }
 
 .coach__title {
+  @include font($primary-font, 22px, 22px, $primary-color);
+  font-weight: 800;
   margin: 0;
   padding: 0;
   font-size: 22px;
@@ -21,18 +36,19 @@
   line-height: 22px;
 
   @media (min-width: $tablet-width) {
-    width: calc(100% - 100px);
-    font-size: 25px;
-    line-height: 25px;
+    @include font($primary-font, 25px, 25px, $primary-color);
+    font-weight: 800;
+    width: 339px;
     margin-right: auto;
     padding-bottom: 4px;
   }
 
   @media (min-width: $desktop-width) {
-    font-size: 35px;
-    line-height: 35px;
+    @include font($primary-font, 35px, 35px, $primary-color);
+    font-weight: 800;
     padding-bottom: 0;
     padding-top: 7px;
+    width: 378px;
   }
 }
 
@@ -41,7 +57,60 @@
 
   @media (min-width: $tablet-width) {
     display: block;
+    width: 37px;
+    height: 35px;
+    border: none;
+    background-color: $blue-color;
+    display: flex;
+    position: relative;
+
+    &--prev::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 16px;
+      height: 10px;
+      mask-image: url("../../__spritemap#sprite-arrow-left-tour-view");
+      background-color: $white-color;
+      mask-repeat: no-repeat;
+      top: 12px;
+      left: 10px;
+    }
+
+    &--next::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 16px;
+      height: 10px;
+      mask-image: url("../../__spritemap#sprite-arrow-right-tour-view");
+      background-color: $white-color;
+      mask-repeat: no-repeat;
+      top: 12px;
+      left: 11px;
+    }
   }
+}
+
+.coach__button-wrapper {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    column-gap: 4px;
+  }
+}
+
+.coach__swiper {
+  height: 356px;
+  width: 290px;
+
+  @media (min-width: $tablet-width) {
+		width: 678px;
+    height: 388px;
+	}
+
+	@media (min-width: $desktop-width) {
+		width: 1200px;
+	}
 }
 
 .coach__list {
@@ -49,13 +118,20 @@
   padding: 0;
   list-style: none;
   margin-bottom: 26px;
+  display: flex;
+  height: 356px;
+  width: 290px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 27px;
+    width: 678px;
+    height: 388px;
+    column-gap: 20px;
   }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 58px;
+    width: 1200px;
   }
 }
 
@@ -119,6 +195,11 @@
 		padding: 0;
     font-size: 12px;
     line-height: 16px;
+    width: 260px;
+
+    @media (min-width: $tablet-width) {
+      width: 182px;
+    }
 
     @media (min-width: $desktop-width) {
       width: 255px;
@@ -134,7 +215,6 @@
   right: 0;
   width: 24px;
   height: 24px;
-  border: 1px solid rgba(45, 56, 63, 0.3);
 
   &::before {
     content: "";
@@ -146,7 +226,7 @@
     height: 24px;
     background-color: $primary-color;
     mask-image: url("../../__spritemap#sprite-vk-view");
-    mask-size: 15px 10px;
+    mask-size: 24px 24px;
     mask-position: 50% 50%;
     mask-repeat: no-repeat;
   }

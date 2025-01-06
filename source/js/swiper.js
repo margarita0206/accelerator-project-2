@@ -1,6 +1,9 @@
 import Swiper from 'swiper/bundle';
+import { setCustomSlideMove, throttle } from './utils';
+import { Screen } from './const';
 
 let advSwiper = null;
+let gallerySwiper = null;
 
 export const toursSwiper = new Swiper('.swiper2', {
   direction: 'horizontal',
@@ -35,6 +38,46 @@ export const toursSwiper = new Swiper('.swiper2', {
     }
   },
 });
+
+export const swiperCoach = new Swiper('.swiper3', {
+  direction: 'horizontal',
+  init: false,
+  loop: false,
+  simulateTouch: false,
+  keyboard: {
+    enabled: false,
+  },
+  
+  slideClass: 'coach__item',
+  wrapperClass: 'coach__list',
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      navigation: false,
+      spaceBetween: 40,
+      initialSlide: 2,
+    },
+
+    768: {
+      slidesPerView: 3,
+      initialSlide: 0,
+      navigation: {
+        nextEl: '.coach__button-swiper--next',
+        prevEl: '.coach__button-swiper--prev',
+      },
+    },
+
+    1440: {
+      slidesPerView: 4,
+      initialSlide: 0,
+      navigation: {
+        nextEl: '.coach__button-swiper--next',
+        prevEl: '.coach__button-swiper--prev',
+      },
+    }
+  }
+});
+
 
 export const reviewsSwiper = new Swiper('.swiper4', {
   direction: 'horizontal',
@@ -108,6 +151,50 @@ const initAdvSwiper = () => {
   }
 };
 
+const initGallerySwiper = () => {
+  const screenWidth = window.innerWidth;
+
+  if (screenWidth < Screen.desktop) {
+    if (!gallerySwiper) {
+      gallerySwiper = new Swiper('.swiper6', {
+        direction: 'horizontal',
+        loop: true,
+        simulateTouch: false,
+        keyboard: {
+          enabled: false,
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 5,
+            centeredSlides: false,
+            slideToClickedSlide: false,
+            navigation: {
+              nextEl: '.swiper-button--gallery-next',
+              prevEl: '.swiper-button--gallery-prev',
+            },
+          },
+          320: {
+            slidesPerView: 2,
+            spaceBetween: 5,
+            centeredSlides: false,
+            slideToClickedSlide: false,
+            navigation: {
+              nextEl: '.swiper-button--gallery-next',
+              prevEl: '.swiper-button--gallery-prev',
+            },
+          },
+        },
+      });
+    }
+  } else {
+    if (gallerySwiper) {
+      gallerySwiper.destroy(true, true);
+      gallerySwiper = null;
+    }
+  }
+};
+
 export const handleAdvSwiper = () => {
   initAdvSwiper();
   window.addEventListener(
@@ -116,29 +203,10 @@ export const handleAdvSwiper = () => {
   );
 };
 
-const swiperCoach = new Swiper('.coach__swiper', {
-  loop: false,
-  slidesPerView: 'auto',
-  spaceBetween: 20,
-  initialSlide: 2,
-  modules: [Navigation],
-  navigation: {
-    nextEl: '.coach__button-swiper--next',
-    prevEl: '.coach__button-swiper--prev',
-  },
-  slideClass: 'coach__item',
-  wrapperClass: 'coach__list',
-  breakpoints: {
-    768: {
-      slidesPerView: 3,
-      initialSlide: 0,
-    },
-
-    1440: {
-      slidesPerView: 4,
-      initialSlide: 0,
-    }
-  }
-});
-
-swiperCoach.init();
+export const handleGallerySwiper = () => {
+  initGallerySwiper();
+  window.addEventListener(
+    'resize',
+    throttle(() => initGallerySwiper(), 200)
+  );
+};
