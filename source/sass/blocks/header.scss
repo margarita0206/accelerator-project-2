@@ -1,72 +1,282 @@
 .header {
-  min-width: 320px;
   background-color: $blue-color;
-
-  @media (min-width: $tablet-width) {
-		min-width: 768px;
-	}
+  flex-grow: 0;
 }
 
-.header__menu {
+.header__wrapper {
+  width: 320px;
+  margin: 0 auto;
+  padding: 15px 15px 11px;
+  display: grid;
+  grid-template-columns: 1fr 142px;
+  gap: 14px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-wrap: wrap;
+    width: 768px;
+    padding: 20px 45px;
+    gap: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+    padding: 32px 120px;
+  }
+}
+
+.header__nav {
   display: none;
 
   @media (min-width: $desktop-width) {
     display: block;
+    width: 838px;
   }
 }
 
-.header__list {
-  list-style-type: none;
-}
-
-.header__wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  width: 142px;
-  margin: 15px 15px 15px 0;
-
-  @media (min-width: $tablet-width) {
-		width: 452px;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 20px 45px 20px 0;
-	}
-}
-
-.header__logotype {
-  margin-bottom: 14px;
-
-  @media (min-width: $tablet-width) {
+.header-nav__list {
   margin: 0;
-  }
-}
-
-.header__tel {
-  @include font($primary-font, 14px, 14px, $white-color);
-  font-weight: 600;
-  text-decoration: none;
-  text-align: right;
-
-  @media (min-width: $tablet-width) {
-    margin-top: 17px;
-  }
-}
-
-.header__container {
-  min-width: 320px;
-  min-height: 100px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  padding: 0;
+  list-style: none;
+  width: 320px;
+  margin: 0 auto;
+  padding: 15px 15px 50px;
 
   @media (min-width: $tablet-width) {
     width: 768px;
-		min-height: 82px;
-	}
+    padding: 30px 45px 70px;
+  }
 
   @media (min-width: $desktop-width) {
-    width: 1440px;
-		min-height: 82px;
-	}
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: auto;
+    gap: 30px;
+    padding: 0 133px;
+  }
+}
+
+.header-nav__item {
+  margin-bottom: 22px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 26px;
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.header-nav__link {
+  display: block;
+  text-decoration: none;
+  position: relative;
+  color: $white-color;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: none;
+    padding-top: 2px;
+  }
+
+  &:hover {
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $white-color;
+    }
+  }
+
+  &:focus {
+    outline: none;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: -3px;
+      left: -5px;
+      width: calc(100% + 10px);
+      height: calc(100% + 6px);
+      border: 1px solid $white-color;
+    }
+  }
+
+  &:active {
+    color: #1c3374;
+  }
+
+  &--disabled {
+    color: #999999;
+    cursor: not-allowed;
+  }
+}
+
+.header__logotype-link {
+  grid-column: 2 / 3;
+  width: 142px;
+  height: 42px;
+
+  @media (min-width: $tablet-width) {
+    width: 226px;
+    padding: 0 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
+    width: 205px;
+    height: 62px;
+    padding: 10px 30px 10px 32px;
+  }
+}
+
+.header__logotype {
+  display: block;
+  width: 142px;
+  height: 42px;
+}
+
+.header__toggle {
+  grid-area: 1 / 1 / 2 / 2;
+  display: block;
+  width: 26px;
+  height: 26px;
+  border: none;
+  mask-image: url("../../__spritemap#sprite-menu-view");
+  mask-size: 26px 26px;
+  background-color: $white-color;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    margin-right: auto;
+  }
+
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+
+  &--disabled {
+    cursor: not-allowed;
+    opacity: 0.1;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .main-header__wrapper--opened .main-header__nav {
+    position: absolute;
+    display: block;
+    top: 100px;
+    left: 0;
+    z-index: 10;
+    min-width: 320px;
+    width: 100%;
+    background-color: $blue-color;
+
+    @media (min-width: $tablet-width) {
+      min-width: 768px;
+      top: 82px;
+    }
+  }
+
+  .header__wrapper--opened .header__toggle {
+    display: block;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    position: relative;
+  
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 26px;
+      height: 26px;
+      mask-image: url("../../__spritemap#sprite-menu-burger-view");
+      background-color: $white-color;
+      mask-size: 26px 26px;
+      mask-repeat: no-repeat;
+    }
+  }
+
+  .header__tel {
+    @include font($primary-font, 14px, 14px, $white-color);
+    font-weight: 600;
+    display: block;
+    text-decoration: none;
+    grid-area: 2 / 2 / 3 / 3;
+    text-align: right;
+    color: $white-color;
+    letter-spacing: 0.1px;
+    cursor: pointer;
+  
+    @media (min-width: $tablet-width) {
+      @include font($primary-font, 16px, 16px, $white-color);
+      font-weight: 600;
+      width: 226px;
+      line-height: 17px;
+      letter-spacing: 0;
+      padding-top: 2px;
+    }
+  
+    @media (min-width: $desktop-width) {
+      @include font($primary-font, 18px, 18px, $white-color);
+      font-weight: 600;
+      width: auto;
+      padding-top: 3px;
+    }
+  
+    &:hover {
+      opacity: 0.5;
+    }
+  
+    &:focus {
+      outline: none;
+      opacity: 1;
+      color: $primary-color;
+    }
+  
+    &:active {
+      color: #1c3374;
+    }
+  
+    &--disabled {
+      color: #999999;
+      cursor: not-allowed;
+    }
+  }
 }

@@ -20,41 +20,52 @@
 
   <body class="page-body">
     <h1 class="visually-hidden">Туристические походы</h1>
-    <header class="page-body__header header" data-test="header">
-      <section class="header__container">
-        <h2 class="visually-hidden">Навигация</h2>
-        <div class="header__button-burger button-burger" role="button" tabindex="0" aria-label="Меню">
-          <div class="button-burger__menu"></div>
+    <header class="header" data-test="header">
+      <div class="header__wrapper">
+        <button class="header__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <div class="header__logotype-link">
+          <img class="header__logotype logotype" width="142" height="42" src="img/logotype-header.svg" alt="Логотип компании Lifetour">
         </div>
-        <nav class="header__header-nav header-nav header-nav--closed">
+        <nav class="header__header-nav header-nav" aria-label="Главная навигация по сайту">
           <ul class="header-nav__list">
             <li class="header-nav__item">
-              <a class="header-nav__link" href="#">Туры</a>
+              <a class="header-nav__link" href="#tours">
+                Туры
+              </a>
             </li>
             <li class="header-nav__item">
-              <a class="header-nav__link" href="#">Обучение</a>
+              <a class="header-nav__link" href="#training">
+                Обучение
+              </a>
             </li>
             <li class="header-nav__item">
-              <a class="header-nav__link" href="#">О нас</a>
+              <a class="header-nav__link" href="#about">
+                О нас
+              </a>
             </li>
             <li class="header-nav__item">
-              <a class="header-nav__link" href="#">Отзывы</a>
+              <a class="header-nav__link" href="#reviews">
+                Отзывы
+              </a>
             </li>
             <li class="header-nav__item">
-              <a class="header-nav__link" href="#">Фотографии</a>
+              <a class="header-nav__link" href="#gallery">
+                Фотографии
+              </a>
             </li>
             <li class="header-nav__item">
-              <a class="header-nav__link" href="#">Контакты</a>
+              <a class="header-nav__link" href="#contacts">
+                Контакты
+              </a>
             </li>
           </ul>
         </nav>
-        <div class="header__wrapper">
-          <a class="header__logotype-link">
-            <img class="header__logotype logotype" width="142" height="42" src="img/logotype-header.svg" alt="Логотип компании Lifetour">
-          </a>
-          <a class="header__tel" href="tel:+88000000000" tabindex="0">8 800 000-00-00</a>
-        </div>
-      </section>
+        <a class="header__tel" href="tel:88000000000" tabindex="0">
+          8 800 000-00-00
+        </a>
+      </div>
     </header>
     
     <main class="page-body__main main">
@@ -685,6 +696,7 @@
       </section>
   
       <section class="main__adv adv" data-test="adv">
+        <div class="adv__background"></div>
         <div class="adv__container-features">
           <h2 class="adv__title title" title="Преимущества">Преимущества</h2>
           <div class="adv__wrapper-container">

@@ -1,16 +1,40 @@
 .adv {
-	width: 290px;
-	margin: 0 auto;
-	padding: 20px 0;
-
 	@media (min-width: $tablet-width) {
-		width: 678px;
-		padding: 40px 0;
+		position: relative;
+	}
+}
+
+.adv__background {
+	@media (min-width: $tablet-width) {
+		position: absolute;
+		z-index: -1;
+		width: 100%;
+    height: 1265px;
+		background-image:
+		  image-set(
+			  url("../../img/adv-background-tablet@1x.png") 1x,
+			  url("../../img/adv-background-tablet@2x.png") 2x,
+			  url("../../img/adv-background-tablet@1x.webp") 1x,
+			  url("../../img/adv-background-tablet@2x.webp") 2x
+		  );
+		background-size: 100% auto;
+		background-repeat: no-repeat;
+		top: 190px;
 	}
 
 	@media (min-width: $desktop-width) {
-		min-width: 1440px;
-		padding: 135px 100px;
+		width: 100%;
+    height: 734px;
+		background-image:
+		  image-set(
+			  url("../../img/adv-background-desktop@1x.png") 1x,
+			  url("../../img/adv-background-desktop@2x.png") 2x,
+		    url("../../img/adv-background-desktop@1x.webp") 1x,
+			  url("../../img/adv-background-desktop@2x.webp") 2x
+		  );
+		background-size: 100% auto;
+		background-repeat: no-repeat;
+		top: -320px;
 	}
 }
 
@@ -86,7 +110,7 @@
 }
 
 .adv__wrapper-container {
-	@media (min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
 		min-width: 1440px;
 	}
 }
@@ -103,7 +127,7 @@
 		
 	@media (min-width: $desktop-width) {
 		min-width: 1440px;
-		justify-content: flex-start;
+		justify-content: center;
 		flex-wrap: nowrap;
 	}
 }
@@ -121,12 +145,18 @@
 }
 
 .adv__container-features {
+	width: 290px;
+	margin: 0 auto;
+	padding: 20px 0;
+
 	@media (min-width: $tablet-width) {
-	  width: 678px;
+		width: 678px;
+		padding: 40px 0;
 	}
 
 	@media (min-width: $desktop-width) {
 		min-width: 1440px;
+		padding: 135px 0;
 	}
 }
 
@@ -148,6 +178,11 @@
 		margin: 0;
 	}
 
+	@media (min-width: $desktop-width) {
+		width: 380px;
+		padding: 40px 20px;
+	}
+
 	h3 {
 		@include font($primary-font, 14px, 14px, $primary-color);
     font-weight: 600;
@@ -159,6 +194,12 @@
 			@include font($primary-font, 16px, 16px, $primary-color);
       font-weight: 600;
 			width: 284px;
+		}
+
+		@media (min-width: $desktop-width) {
+			@include font($primary-font, 18px, 18px, $primary-color);
+      font-weight: 600;
+			width: 340px;
 		}
 	}
 
@@ -172,6 +213,18 @@
 			@include font($primary-font, 14px, 22px, $primary-color);
       font-weight: 400;
 			width: 284px;
+		}
+
+		@media (min-width: $desktop-width) {
+			@include font($primary-font, 14px, 22px, $primary-color);
+      font-weight: 400;
+			width: 340px;
+		}
+	}
+
+	br {
+		@media (min-width: $desktop-width) {
+		  display: none;
 		}
 	}
 }
@@ -310,7 +363,9 @@
 		left: 45%;
 		background-image: url("../../__spritemap#sprite-way-advantages-view");
 		background-repeat: no-repeat;
-		background-size: 42px 42px;
+		background-size: 24px 24px;
+		background-position: center;
+		border: 1px solid $blue-color;
 	}
 
 	@media (min-width: $tablet-width) {

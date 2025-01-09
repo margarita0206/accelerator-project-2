@@ -4,6 +4,7 @@
 // import 'swiper/css';
 import { toursSwiper, reviewsSwiper, handleAdvSwiper, swiperCoach, handleGallerySwiper } from './swiper';
 import { validForm, validateLength } from './form';
+import { menuToggle, navLinkToggle } from './menu';
 
 window.addEventListener('DOMContentLoaded', () => {
   toursSwiper.init();
@@ -15,5 +16,7 @@ window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
     validForm();
     validateLength();
+    menuToggle();
+    navLinkToggle();
   });
 });

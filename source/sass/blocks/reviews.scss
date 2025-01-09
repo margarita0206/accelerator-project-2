@@ -1,5 +1,6 @@
 .reviews {
 	margin: 0 auto;
+  position: relative;
 }
 
 .reviews__title {
@@ -250,6 +251,7 @@
 
 .reviews__slider-wrapper {
   width: 290px;
+
   @media (min-width: $tablet-width) {
     width: 565px;
     min-height: 277px;
