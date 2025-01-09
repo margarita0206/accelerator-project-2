@@ -20,7 +20,7 @@
 
   <body class="page-body">
     <h1 class="visually-hidden">Туристические походы</h1>
-    <header class="header" data-test="header">
+    <header class="pade-body__header header" data-test="header">
       <div class="header__wrapper">
         <button class="header__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
@@ -28,35 +28,35 @@
         <div class="header__logotype-link">
           <img class="header__logotype logotype" width="142" height="42" src="img/logotype-header.svg" alt="Логотип компании Lifetour">
         </div>
-        <nav class="header__header-nav header-nav" aria-label="Главная навигация по сайту">
-          <ul class="header-nav__list">
-            <li class="header-nav__item">
-              <a class="header-nav__link" href="#tours">
+        <nav class="header__nav" aria-label="Главная навигация по сайту">
+          <ul class="header__list">
+            <li class="header__item">
+              <a class="header__link" href="#tours">
                 Туры
               </a>
             </li>
-            <li class="header-nav__item">
-              <a class="header-nav__link" href="#training">
+            <li class="header__item">
+              <a class="header__link" href="#training">
                 Обучение
               </a>
             </li>
-            <li class="header-nav__item">
-              <a class="header-nav__link" href="#about">
+            <li class="header__item">
+              <a class="header__link" href="#about">
                 О нас
               </a>
             </li>
-            <li class="header-nav__item">
-              <a class="header-nav__link" href="#reviews">
+            <li class="header__item">
+              <a class="header__link" href="#reviews">
                 Отзывы
               </a>
             </li>
-            <li class="header-nav__item">
-              <a class="header-nav__link" href="#gallery">
+            <li class="header__item">
+              <a class="header__link" href="#gallery">
                 Фотографии
               </a>
             </li>
-            <li class="header-nav__item">
-              <a class="header-nav__link" href="#contacts">
+            <li class="header__item">
+              <a class="header__link" href="#contacts">
                 Контакты
               </a>
             </li>
@@ -163,7 +163,7 @@
         </div>
       </section>
   
-      <section class="main__tours tours" data-test="tours">
+      <section class="main__tours tours" id="tours" data-test="tours">
         <div class="tours__background"></div>
         <div class="tours__container">
           <div class="tours__tours-header slider-header">
@@ -395,15 +395,11 @@
               </div>
             </div>
           </div>
-          <div class="tours__link-wrapper">
-            <a class="tours__link" href="#">
-              <p class="tours__link-content">Показать все туры</p>
-            </a>
-          </div>
+          <a class="tours__link" href="#">Показать все туры</a>
         </div>
       </section>
   
-      <section class="main__training training" data-test="training">
+      <section class="main__training training" id="training" data-test="training">
         <div class="training__wrapper">
           <h2 class="training__title title" title="Обучение">Обучение</h2>
           <p>Обучение проводится квалифицированными специалистами, за плечами которых десятки пройденных
@@ -569,7 +565,7 @@
         </div>
       </section>
   
-      <section class="main__about about" data-test="about">
+      <section class="main__about about" id="about" data-test="about">
         <div class="about__container">
           <div class="about__picture">
             <picture>
@@ -597,7 +593,7 @@
         </div>
       </section>
   
-      <section class="main__reviews reviews" data-test="reviews">
+      <section class="main__reviews reviews" id="reviews" data-test="reviews">
         <div class="reviews__container-slide">
           <div class="reviews__wrapper-tablet">
             <div class="reviews__title-wrapper">
@@ -614,8 +610,8 @@
           </div>
           <div class="reviews__slider-wrapper">
             <div class="reviews__swiper swiper4">
-              <div class="reviews__swiper-wrapper swiper-wrapper">
-                <div class="reviews__reviews-slide reviews-slide swiper-slide">
+              <ul class="reviews__swiper-wrapper swiper-wrapper">
+                <li class="reviews__reviews-slide reviews-slide swiper-slide">
                   <div class="reviews__picture">
                     <picture>
                       <source media="(min-width: 1440px)" width="258" height="253" type="image/webp" srcset="img/reviews-desktop1@1x.webp 1x, img/reviews-desktop1@2x.webp 2x">
@@ -632,8 +628,8 @@
                     <h4 class="reviews__name">Фролов Александр</h4>
                     <p class="reviews__gorod">38 лет, Москва</p>
                   </div>
-                </div>
-                <div class="reviews__reviews-slide reviews-slide swiper-slide">
+                </li>
+                <li class="reviews__reviews-slide reviews-slide swiper-slide">
                   <div class="reviews__picture">
                       <picture>
                       <source media="(min-width: 1440px)" width="258" height="253" type="image/webp" srcset="img/reviews-desktop2@1x.webp 1x, img/reviews-desktop2@2x.webp 2x">
@@ -652,8 +648,8 @@
                     <h4 class="reviews__name">Иван Соловьёв</h4>
                     <p class="reviews__gorod">25 лет, Владивосток</p>
                   </div>
-                </div>
-                <div class="reviews__reviews-slide reviews-slide swiper-slide">
+                </li>
+                <li class="reviews__reviews-slide reviews-slide swiper-slide">
                   <div class="reviews__picture">
                     <picture>
                       <source media="(min-width: 1440px)" width="258" height="253" type="image/webp" srcset="img/reviews-desktop3@1x.webp 1x, img/reviews-desktop3@2x.webp 2x">
@@ -670,8 +666,8 @@
                     <h4 class="reviews__name">Евгения Баженова</h4>
                     <p class="reviews__gorod">23 года, Кострома</p>
                   </div>
-                </div>
-                <div class="reviews__reviews-slide reviews-slide swiper-slide">
+                </li>
+                <li class="reviews__reviews-slide reviews-slide swiper-slide">
                   <div class="reviews__picture">
                     <picture>
                       <source media="(min-width: 1440px)" width="258" height="253" type="image/webp" srcset="img/reviews-desktop4@1x.webp 1x, img/reviews-desktop4@2x.webp 2x">
@@ -688,8 +684,8 @@
                     <h4 class="reviews__name">Елена Пирогова</h4>
                     <p class="reviews__gorod">37 лет, Тюмень</p>
                   </div>
-                </div>
-              </div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -738,7 +734,7 @@
         </div>
       </section>
       
-      <section class="main__gallery gallery" data-test="gallery">
+      <section class="main__gallery gallery" id="gallery" data-test="gallery">
         <div class="gallery__wrapper">
           <div class="gallery__slider-wrapper slider-wrapper">
             <h2 class="gallery__title title" title="Фотогалерея">Фотогалерея</h2>
@@ -860,7 +856,7 @@
       </section>
     </main>
 
-    <section class="page-body__footer footer" data-test="footer">
+    <section class="page-body__footer footer" id="contacts" data-test="footer">
       <div class="footer__contacts-wrapper">
         <div class="footer__container-contacts">
           <h2 class="footer__title title" title="Контакты">Контакты</h2>
@@ -868,11 +864,11 @@
             <ul class="footer__contacts-list">
               <li class="footer__contacts-item footer__contacts-item--phone">
                 <h4 class="footer__contacts-title">Телефон</h4>
-                <a class="footer__contacts-link" href="tel:+89837454545">+7 983 745-45-45</a>
+                <a class="footer__contacts-link footer__contacts-link--interactiv" href="tel:+89837454545">+7 983 745-45-45</a>
               </li>
               <li class="footer__contacts-item footer__contacts-item--email">
                 <h4 class="footer__contacts-title">Email</h4>
-                <a class="footer__contacts-link" href="#">info@lifetour.com</a>
+                <a class="footer__contacts-link footer__contacts-link--interactiv" href="#">info@lifetour.com</a>
               </li>
               <li class="footer__contacts-item footer__contacts-item--adress">
                 <h4 class="footer__contacts-title">Адрес</h4>
@@ -904,24 +900,24 @@
         <div class="footer__list-wrapper">
           <ul class="footer__list footer__list-one">
             <li class="footer__item">
-              <a class="footer__link" href="#">Туры</a>
+              <a class="footer__link" href="#tours">Туры</a>
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="#">Обучение</a>
+              <a class="footer__link" href="#training">Обучение</a>
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="#">О нас</a>
+              <a class="footer__link" href="#about">О нас</a>
             </li>
           </ul>
           <ul class="footer__list footer__list-two">
             <li class="footer__item">
-              <a class="footer__link" href="#">Отзывы</a>
+              <a class="footer__link" href="#reviews">Отзывы</a>
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="#">Фотографии</a>
+              <a class="footer__link" href="#gallery">Фотографии</a>
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="#">Контакты</a>
+              <a class="footer__link" href="#contacts">Контакты</a>
             </li>
           </ul>
         </div>

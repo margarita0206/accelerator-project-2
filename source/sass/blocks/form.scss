@@ -144,6 +144,33 @@
 	@media (min-width: $desktop-width) {
 		width: 180px;
 	}
+
+	&:hover {
+		background-color: $white-color;
+		border: 1px solid #1c3374;
+		color: #1c3374;
+	}
+
+	&:focus {
+		background-color: $white-color;
+		border: none;
+		color: #1c3374;
+	}
+
+	&:focus-visible {
+		background-color: $white-color;
+		border: none;
+		color: #1c3374;
+	}
+
+	&:active {
+		background-color: #1c3374;
+		color: $white-color;
+	}
+
+	&:disabled {
+		background-color: #999999;
+	}
 }
 
 .form__form-question {

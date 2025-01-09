@@ -1,6 +1,5 @@
 .coach {
   max-width: 290px;
-  overflow: hidden;
 
   @media (min-width: $tablet-width) {
 		max-width: 678px;
@@ -102,9 +101,10 @@
 .coach__swiper {
   height: 356px;
   width: 290px;
+  overflow: hidden;
 
   @media (min-width: $tablet-width) {
-		width: 678px;
+		width: 680px;
     height: 388px;
 	}
 
@@ -124,7 +124,7 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 27px;
-    width: 678px;
+    width: 680px;
     height: 388px;
     column-gap: 20px;
   }
