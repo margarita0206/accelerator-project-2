@@ -51,43 +51,11 @@
   }
 }
 
-.coach__button-swiper {
+.coach__swiper-button {
   display: none;
 
   @media (min-width: $tablet-width) {
     display: block;
-    width: 37px;
-    height: 35px;
-    border: none;
-    background-color: $blue-color;
-    display: flex;
-    position: relative;
-
-    &--prev::before {
-      content: "";
-      position: absolute;
-      display: block;
-      width: 16px;
-      height: 10px;
-      mask-image: url("../../__spritemap#sprite-arrow-left-tour-view");
-      background-color: $white-color;
-      mask-repeat: no-repeat;
-      top: 12px;
-      left: 10px;
-    }
-
-    &--next::before {
-      content: "";
-      position: absolute;
-      display: block;
-      width: 16px;
-      height: 10px;
-      mask-image: url("../../__spritemap#sprite-arrow-right-tour-view");
-      background-color: $white-color;
-      mask-repeat: no-repeat;
-      top: 12px;
-      left: 11px;
-    }
   }
 }
 
@@ -226,9 +194,18 @@
     height: 24px;
     background-color: $primary-color;
     mask-image: url("../../__spritemap#sprite-vk-view");
-    mask-size: 24px 24px;
+    mask-size: 14px 8px;
     mask-position: 50% 50%;
     mask-repeat: no-repeat;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 24px;
+    height: 24px;
+    border: 1px solid rgba(45, 56, 63, 0.3);
   }
 
   &:hover {
@@ -247,6 +224,10 @@
     &::before {
       background-color: $white-color;
       z-index: 1;
+    }
+
+    &::after {
+      border: none;
     }
   }
 }

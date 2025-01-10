@@ -4,30 +4,4 @@
 	height: 35px;
 	border: none;
 	background-color: $blue-color;
-
-	&--prev::before {
-    content: "";
-      position: absolute;
-      display: block;
-      width: 16px;
-      height: 10px;
-      mask-image: url("../../__spritemap#sprite-arrow-left-tour-view");
-      background-color: $white-color;
-      mask-repeat: no-repeat;
-      top: 12px;
-      left: 10px;
-	}
-
-	&--next::before {
-		content: "";
-		position: absolute;
-		display: block;
-		width: 16px;
-		height: 10px;
-		mask-image: url("../../__spritemap#sprite-arrow-right-tour-view");
-		background-color: $white-color;
-		mask-repeat: no-repeat;
-		top: 12px;
-		left: 11px;
-	}
 }

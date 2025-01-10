@@ -240,51 +240,6 @@
 		width: 1200px;
 		margin: 0 auto;
 		justify-content: center;
-
-	}
-}
-
-.adv__swiper-button {
-	@media (min-width: $desktop-width) {
-		display: block;
-		width: 37px;
-		height: 35px;
-		background-color: $blue-color;
-		border: none;
-		position: relative;
-		cursor: pointer;
-	}
-}
-
-.adv__swiper-button--prev {
-	&::before {
-	  content: "";
-		position: absolute;
-		display: block;
-		width: 37px;
-		height: 35px;
-		mask-image: url("../../__spritemap#sprite-arrow-left-tour-view");
-		mask-repeat: no-repeat;
-		mask-size: 13px 10px;
-		background-color: $white-color;
-		top: 40%;
-		left: 30%;
-	}
-}
-
-.adv__swiper-button--next {
-	&::before {
-	  content: "";
-		position: absolute;
-		display: block;
-		width: 37px;
-		height: 35px;
-		mask-image: url("../../__spritemap#sprite-arrow-right-tour-view");
-		mask-repeat: no-repeat;
-		mask-size: 13px 8px;
-		background-color: $white-color;
-		top: 42%;
-		left: 35%;
 	}
 }
 

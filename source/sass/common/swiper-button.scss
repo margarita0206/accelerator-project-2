@@ -1,0 +1,68 @@
+.swiper-button {
+	width: 37px;
+	height: 35px;
+	background-color: $blue-color;
+	border: none;
+	display: block;
+	position: relative;
+	cursor: pointer;
+	transition: border 0.3s cubic-bezier(0.4, 0, 0.4, 1), background 0.3s cubic-bezier(0.4, 0, 0.4, 1);
+
+	&:hover {
+    border-color: #1c3374;
+    background: $white-color;
+  }
+
+  &:hover::after {
+    background: #1c3374;
+  }
+
+  &:focus-visible {
+    border-color: transparent;
+    background: $white-color;
+  }
+
+  &:focus-visible::before {
+    background: #1c3374;
+  }
+
+	&:active {
+    border-color: #1c3374;
+    background: #1c3374;
+  }
+
+  &:active::after {
+    background: $white-color;
+  }
+
+	&::after {
+		content: "";
+		position: absolute;
+		width: 37px;
+		height: 35px;
+		display: block;
+		background-color: $white-color;
+		top: 13px;
+		left: 10px;
+	}
+	
+	&--prev::after {
+		mask-image: url("../../__spritemap#sprite-arrow-left-tour-view");
+		mask-repeat: no-repeat;
+		mask-size: 15px 10px;
+	
+	}
+
+	&--next::after {
+		mask-image: url("../../__spritemap#sprite-arrow-right-tour-view");
+		mask-repeat: no-repeat;
+		mask-size: 15px 10px;
+	}
+
+	&:disabled {
+    background-color: #999999;
+    opacity: 1;
+    pointer-events: none;
+    cursor: auto;
+  }
+}

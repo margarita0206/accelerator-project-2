@@ -5,6 +5,44 @@ import { Screen } from './const';
 let advSwiper = null;
 let gallerySwiper = null;
 
+export const heroSwiper = new Swiper('.swiper', {
+  direction: 'horizontal',
+  init: false,
+  loop: true,
+  simulateTouch: false,
+  slidesPerView: 1,
+  pagination: {
+    clickable: true,
+    type: 'bullets',
+    el: '.swiper-pagination',
+    bulletClass: 'hero__swiper-pagination-bullet',
+    bulletActiveClass: 'hero__swiper-pagination-bullet--active',
+    renderBullet: function (index, className) {
+      return `<span class="${className} hero__swiper-pagination-bullet hero__swiper-pagination-bullet--${index}"
+        aria-label="Перейти к слайду ${index + 1}."
+        role="button">
+        </span>`;
+    },
+  },
+  breakpoints: {
+    320: {
+      pagination: {
+        clickable: false,
+      }
+    },
+    768: {
+      pagination: {
+        clickable: false,
+      }
+    },
+    1440: {
+      pagination: {
+        clickable: true,
+      }
+    },
+  },
+});
+
 export const toursSwiper = new Swiper('.swiper2', {
   direction: 'horizontal',
   init: false,
@@ -62,8 +100,8 @@ export const swiperCoach = new Swiper('.swiper3', {
       slidesPerView: 3,
       initialSlide: 0,
       navigation: {
-        nextEl: '.coach__button-swiper--next',
-        prevEl: '.coach__button-swiper--prev',
+        nextEl: '.coach__swiper-button--next',
+        prevEl: '.coach__swiper-button--prev',
       },
     },
 
@@ -71,8 +109,8 @@ export const swiperCoach = new Swiper('.swiper3', {
       slidesPerView: 4,
       initialSlide: 0,
       navigation: {
-        nextEl: '.coach__button-swiper--next',
-        prevEl: '.coach__button-swiper--prev',
+        nextEl: '.coach__swiper-button--next',
+        prevEl: '.coach__swiper-button--prev',
       },
     }
   }
@@ -131,16 +169,16 @@ const initAdvSwiper = () => {
             centeredSlides: false,
             slideToClickedSlide: false,
             navigation: {
-              nextEl: '.swiper-button--next',
-              prevEl: '.swiper-button--prev',
+              nextEl: '.swiper-button--adv-next',
+              prevEl: '.swiper-button--adv-prev',
             },
           },
         },
       });
 
       setCustomSlideMove(advSwiper, {
-        nextEl: '.swiper-button--next',
-        prevEl: '.swiper-button--prev',
+        nextEl: '.swiper-button--adv-next',
+        prevEl: '.swiper-button--adv-prev',
       });
     }
   } else {

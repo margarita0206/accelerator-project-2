@@ -289,10 +289,15 @@
   &--boots::before {
     mask-image: url("../../__spritemap#sprite-boots-trainers-view");
     mask-size: 30px 24px;
+    mask-position: center;
   }
 
   &--tree::before {
     mask-image: url("../../__spritemap#sprite-elka-trainers-view");
+
+    @media (min-width: $desktop-width) {
+      mask-size: 26px;
+    }
   }
 
   &--mountain::before {

@@ -9,9 +9,6 @@
 }
 
 .gallery__wrapper {
-	display: flex;
-  flex-flow: wrap;
-  align-items: flex-start;
 	width: 320px;
 
 	@media (min-width: $tablet-width) {
@@ -158,12 +155,12 @@
 	padding: 20px 15px 31px;
 
 	@media (min-width: $tablet-width) {
-		width: 678px;
+		width: 768px;
 		padding: 40px 45px 21px;
 	}
 
 	@media (min-width: $desktop-width) {
-		width: 1220px;
+		width: 1440px;
 		padding: 100px 120px 46px;
 	}
 }

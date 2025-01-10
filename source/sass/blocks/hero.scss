@@ -25,6 +25,7 @@
 .hero__swiper {
 	height: 568px;
 	overflow: hidden;
+	position: relative;
 
 	@media (min-width: $tablet-width) {
 		height: 1034px;
@@ -43,6 +44,33 @@
 	background-color: $blue-color;
 	border: none;
 	cursor: pointer;
+
+	&:hover {
+		background-color: $white-color;
+		border: 1px solid #1c3374;
+		color: #1c3374;
+	}
+
+	&:focus {
+		background-color: $white-color;
+		border: none;
+		color: #1c3374;
+	}
+
+	&:focus-visible {
+		background-color: $white-color;
+		border: none;
+		color: #1c3374;
+	}
+
+	&:active {
+		background-color: #1c3374;
+		color: $white-color;
+	}
+
+	&:disabled {
+		background-color: #999999;
+	}
 }
 
 .hero__content-wrapper {
@@ -165,27 +193,27 @@
 }
 
 .hero__swiper-pagination {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  height: 20px;
-  margin: 0 0 40px 0;
-  overflow-x: auto;
-  overflow-y: hidden;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(0,0,0,0.3) transparent;
+	width: 88px;
+	height: 16px;
+	position: absolute;
+	display: flex;
+	justify-content: space-between;
+	column-gap: 20px;
+  bottom: -50px;
+	left: 35%;
 }
 
 .hero__swiper-pagination-bullet {
-  width: 16px;
-  height: 16px;
-  border: solid 1px $white-color;
-  opacity: 1;
+	display: block;
+	border: 1px solid $white-color;
+	opacity: 1;
+	border-radius: 50%;
+	width: 16px;
+	height: 16px;
   background-color: transparent;
 	position: relative;
 
-  &::after {
+	&::after {
     position: absolute;
     content: "";
     width: calc(100% + 6px);
@@ -193,9 +221,9 @@
     top: -3px;
     left: -3px;
     border-radius: 50%;
-    border: solid 1px #000000;
+    border: solid 1px rgba(255, 255, 255, 0.5);
     opacity: 0;
-  }
+	}
 
 	&--active {
     background-color: $white-color;
@@ -214,7 +242,7 @@
   }
 
   &:focus-visible::after {
-  opacity: 1;
-  outline: none;
+    opacity: 1;
+    outline: none;
   }
-}
+} 
