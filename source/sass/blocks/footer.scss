@@ -3,13 +3,13 @@
   margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
-		padding: 34px 0 0;
-	}
+    padding: 0;
+  }
 
-	@media (min-width: $desktop-width) {
-		padding: 0;
+  @media (min-width: $desktop-width) {
+    padding: 0;
     margin-bottom: 32px;
-	}
+  }
 }
 
 .footer__item {
@@ -18,9 +18,9 @@
   text-align: center;
 
   @media (min-width: $tablet-width) {
-		width: auto;
+    width: auto;
     text-align: start;
-	}
+  }
 }
 
 .footer__logotype {
@@ -32,13 +32,15 @@
 .footer__tel {
   @include font($primary-font, 14px, 14px, $primary-color);
   font-weight: 600;
-  text-decoration: none ;
+  text-decoration: none;
   display: none;
 
   @media (min-width: $desktop-width) {
-		display: block;
+    display: block;
     align-self: center;
-	}
+    width: 200px;
+    text-align: right;
+  }
 
   &:hover {
     color: $blue-color;
@@ -61,6 +63,7 @@
 
 .footer__link {
   @include font($primary-font, 14px, 14px, $primary-color);
+
   font-weight: 400;
   text-decoration: none;
   position: relative;
@@ -126,20 +129,23 @@
 .footer__list {
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 7px;
+  flex-wrap: wrap;
 
   @media (min-width: $tablet-width) {
-		display: flex;
-    flex-wrap: wrap;
-    column-gap: 20px;
-	}
+    flex-direction: row;
+    column-gap: 25px;
+  }
 
   @media (min-width: $desktop-width) {
     column-gap: 30px;
-	}
+  }
 }
 
 .footer__list-wrapper {
-  margin: 23px 15px;
+  margin: 20px 15px 18px;
   display: flex;
   flex-wrap: wrap;
   column-gap: 50px;
@@ -147,13 +153,24 @@
 
   @media (min-width: $tablet-width) {
     margin: 0;
-    column-gap: 20px;
+    column-gap: 23px;
     align-self: center;
-	}
+    width: 536px;
+    justify-content: flex-end;
+    padding-left: 20px;
+    padding-right: 6px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 800px;
+    justify-content: center;
+    padding-right: 0;
+  }
 }
 
 .footer__link-text {
   @include font($primary-font, 12px, 12px, $primary-color);
+
   font-weight: 300;
   text-decoration: none;
   margin: 0 auto;
@@ -166,38 +183,38 @@
   text-align: center;
 
   @media (min-width: $tablet-width) {
-		padding: 0;
+    padding: 0;
     width: 200px;
-	}
+  }
 
-	@media (min-width: $desktop-width) {
-		width: 1200px;
-	}
+  @media (min-width: $desktop-width) {
+    width: 1200px;
+  }
 }
 
 .footer__wrapper {
   padding: 23px 0 0;
   border-top: 1px solid rgba(45, 56, 63, 0.2);
 
-  @media (min-width: $tablet-width) { 
+  @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 42px;
-		margin-bottom: 34px;
+    column-gap: 0;
     justify-content: center;
-    padding: 23px 0 42px;
-	}
+    padding: 34px 0 34px;
+  }
 
   @media (min-width: $desktop-width) {
-		margin-bottom: 22px;
-    column-gap: 114px;
-	}
+    margin-bottom: 22px;
+    column-gap: 0;
+    padding: 23px 0 42px;
+  }
 }
 
 .footer__contacts-item {
   list-style-type: none;
-  margin-bottom: 30px;
-  padding-left: 42px;
+  margin-bottom: 28px;
+  padding-left: 32px;
   display: block;
   position: relative;
 
@@ -206,18 +223,18 @@
   }
 
   @media (min-width: $tablet-width) {
-		padding-left: 34px;
+    padding-left: 35px;
     margin: 0;
-	}
+  }
 
   @media (min-width: $desktop-width) {
-		padding-left: 34px;
+    padding-left: 34px;
     margin-bottom: 35px;
 
     &:last-child {
       margin-bottom: 0;
     }
-	}
+  }
 }
 
 .footer__contacts-item--phone {
@@ -231,6 +248,14 @@
     mask-size: 22px 22px;
     background-color: $primary-color;
     left: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 154px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 346px;
   }
 }
 
@@ -246,6 +271,14 @@
     background-color: $primary-color;
     left: 0;
   }
+
+  @media (min-width: $tablet-width) {
+    width: 159px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 346px;
+  }
 }
 
 .footer__contacts-item--adress {
@@ -260,17 +293,35 @@
     background-color: $primary-color;
     left: 0;
   }
+
+  @media (min-width: $tablet-width) {
+    width: 288px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 346px;
+  }
 }
 
 .footer__contacts-title {
   @include font($primary-font, 14px, 14px, $primary-color);
+
   font-weight: 600;
   margin: 0 0 8px;
+  width: 258px;
 
   @media (min-width: $tablet-width) {
     @include font($primary-font, 16px, 16px, $primary-color);
+
     font-weight: 600;
-	}
+    width: 119px;
+    margin: 0 0 6px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 290px;
+    margin: 0 0 8px;
+  }
 }
 
 .footer__contacts-list {
@@ -278,13 +329,13 @@
   margin: 0 15px 30px;
 
   @media (min-width: $tablet-width) {
-		margin: 0;
-    margin-bottom: 40px;
+    margin: 0;
+    margin-bottom: 39px;
     display: flex;
     flex-wrap: wrap;
     column-gap: 40px;
     justify-content: center;
-	}
+  }
 
   @media (min-width: $desktop-width) {
     flex-direction: column;
@@ -293,73 +344,71 @@
   }
 }
 
-.footer__br-adress {
-  @media (min-width: $tablet-width) {
-		display: none;
-	}
-}
-
 .footer__title {
   @include font($primary-font, 22px, 22px, $primary-color);
-	font-weight: 800;
-  margin: 20px 15px 29px;
+
+  font-weight: 800;
+  margin: 17px 15px 28px;
   position: relative;
-	z-index: 1;
+  z-index: 1;
 
   &::before {
-		content: attr(title);
-		position: absolute;
-		z-index: -1;
-		color: rgba(45, 56, 63, 0.03);
-		font-size: 26px;
-		line-height: 26px;
-		left: 0;
-		top: -12px;
-		width: 290px;
-	}
+    content: attr(title);
+    position: absolute;
+    z-index: -1;
+    color: rgba(45, 56, 63, 0.03);
+    font-size: 26px;
+    line-height: 26px;
+    left: 0;
+    top: -14px;
+    width: 290px;
+  }
 
   @media (min-width: $tablet-width) {
     @include font($primary-font, 25px, 25px, $primary-color);
-	  font-weight: 800;
+
+    font-weight: 800;
     width: 480px;
-    margin: 40px 243px 20px 45px;
+    margin: 40px 243px 21px 45px;
 
     &::before {
-			content: attr(title);
-			position: absolute;
-			z-index: -1;
-			color: rgba(45, 56, 63, 0.03);
-			font-size: 40px;
-			line-height: 40px;
-			left: 0px;
-			top: -15px;
-			width: 542px;
-		}
+      content: attr(title);
+      position: absolute;
+      z-index: -1;
+      color: rgba(45, 56, 63, 0.03);
+      font-size: 40px;
+      line-height: 40px;
+      left: 0;
+      top: -15px;
+      width: 542px;
+    }
   }
 
-   @media (min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     @include font($primary-font, 35px, 35px, $primary-color);
-	  font-weight: 800;
+
+    font-weight: 800;
     width: 500px;
     margin: 100px 100px 25px 0;
 
     &::before {
-			content: attr(title);
-			position: absolute;
-			z-index: -1;
-			color: rgba(45, 56, 63, 0.03);
-			font-size: 55px;
-			line-height: 55px;
-			left: 0px;
-			top: -15px;
-			width: 542px;
-		}
+      content: attr(title);
+      position: absolute;
+      z-index: -1;
+      color: rgba(45, 56, 63, 0.03);
+      font-size: 55px;
+      line-height: 55px;
+      left: 0;
+      top: -15px;
+      width: 542px;
+    }
   }
 }
 
 .footer__container-contacts {
   width: 320px;
   margin: 0 auto;
+  padding-top: 20px;
 
   @media (min-width: $tablet-width) {
     width: 768px;
@@ -372,12 +421,14 @@
 
   p {
     @include font($primary-font, 14px, 20px, $primary-color);
+
     font-weight: 400;
     width: 290px;
     margin: 0 15px 30px;
 
     @media (min-width: $tablet-width) {
       @include font($primary-font, 16px, 24px, $primary-color);
+
       font-weight: 400;
       width: 480px;
       margin: 0 243px 40px 45px;
@@ -392,20 +443,51 @@
 
 .footer__contacts-link {
   @include font($primary-font, 14px, 20px, $primary-color);
+
   font-weight: 400;
   text-decoration: none;
 
   @media (min-width: $tablet-width) {
     @include font($primary-font, 14px, 22px, $primary-color);
+
     font-weight: 400;
+    width: 254px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 290px;
+  }
+}
+
+.footer__contacts-link-span {
+  @include font($primary-font, 14px, 20px, $primary-color);
+
+  font-weight: 400;
+  text-decoration: none;
+  width: 160px;
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    @include font($primary-font, 14px, 22px, $primary-color);
+
+    font-weight: 400;
+    width: 254px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 290px;
   }
 }
 
 .footer__contacts-link--interactiv {
   cursor: pointer;
-  
+
   &:hover {
     color: rgba(45, 56, 63, 0.3);
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 153px;
   }
 }
 
@@ -420,21 +502,21 @@
 
 
 .footer__map {
-	width: 320px;
-	margin: 0 auto;
-  padding-bottom: 20px;
+  width: 320px;
+  margin: 0 auto;
+  padding-bottom: 19px;
 
-	@media (min-width: $tablet-width) {
-		width: 768px;
-    padding-bottom: 40px;
-	}
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    padding-bottom: 39px;
+  }
 
-	@media (min-width: $desktop-width) {
-		margin: 149px 0 0;
+  @media (min-width: $desktop-width) {
+    margin: 149px 0 0;
     padding: 0;
-		width: 600px;
+    width: 600px;
     height: 324px;
-	}
+  }
 }
 
 .footer__map-img {

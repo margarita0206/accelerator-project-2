@@ -1,189 +1,205 @@
 .gallery__img {
-	display: block;
+  display: block;
 }
 
 .gallery {
-	margin: 0 auto;
-	min-height: 457px;
+  margin: 0 auto;
+  min-height: 457px;
   overflow: hidden;
+  width: 320px;
+  
+  @media (min-width: $tablet-width) {
+    width: 768px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+    margin: 0 auto;
+  }
 }
-
-.gallery__wrapper {
-	width: 320px;
-
-	@media (min-width: $tablet-width) {
-		width: 768px;
-	}
-
-	@media (min-width: $desktop-width) {
-		width: 1440px;
-		margin: 0 auto;
-	}
-}
-
 
 .gallery__title {
-	@include font($primary-font, 22px, 22px, $primary-color);
-	font-weight: 800;
-	padding: 16px 0 17px;
-	position: relative;
-	z-index: 1;
+  @include font($primary-font, 22px, 22px, $primary-color);
 
-	&::before {
-		content: attr(title);
-		position: absolute;
-		z-index: -1;
-		color: rgba(45, 56, 63, 0.03);
-		font-size: 26px;
-		line-height: 26px;
-		left: 0;
-		top: 2px;
-		width: 290px;
-	}
+  font-weight: 800;
+  padding: 20px 0 18px;
+  position: relative;
+  z-index: 1;
+  margin: 0 0 -3px;
 
-	@media (min-width: $tablet-width) {
-		@include font($primary-font, 25px, 25px, $primary-color);
-	  font-weight: 800;
-	  padding: 20px 0 5px;
+  &::before {
+    content: attr(title);
+    position: absolute;
+    z-index: -1;
+    color: rgba(45, 56, 63, 0.03);
+    font-size: 26px;
+    line-height: 26px;
+    left: 0;
+    top: 5px;
+    width: 290px;
+  }
 
-		&::before {
-			content: attr(title);
-			position: absolute;
-			z-index: -1;
-			color: rgba(45, 56, 63, 0.03);
-			font-size: 40px;
-			line-height: 40px;
-			left: 0px;
-			top: 4px;
-			width: 542px;
-		}
-	}
+  @media (min-width: $tablet-width) {
+    @include font($primary-font, 25px, 25px, $primary-color);
 
-	@media (min-width: $desktop-width) {
-		@include font($primary-font, 35px, 35px, $primary-color);
-	  font-weight: 800;
-	  padding: 19px 0 0;
+    font-weight: 800;
+    padding: 20px 0 5px;
+    margin-bottom: 26px;
 
-		&::before {
-			content: attr(title);
-			position: absolute;
-			z-index: -1;
-			color: rgba(45, 56, 63, 0.03);
-			font-size: 55px;
-			line-height: 55px;
-			left: 0px;
-			top: 1px;
-			width: 542px;
-		}
-	}
+    &::before {
+      content: attr(title);
+      position: absolute;
+      z-index: -1;
+      color: rgba(45, 56, 63, 0.03);
+      font-size: 40px;
+      line-height: 40px;
+      left: 0;
+      top: 4px;
+      width: 542px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    @include font($primary-font, 35px, 35px, $primary-color);
+
+    font-weight: 800;
+    padding: 20px 0 10px;
+    margin-bottom: 15px;
+
+    &::before {
+      content: attr(title);
+      position: absolute;
+      z-index: -1;
+      color: rgba(45, 56, 63, 0.03);
+      font-size: 55px;
+      line-height: 55px;
+      left: 0;
+      top: 1px;
+      width: 542px;
+    }
+  }
 }
 
 .gallery__wrapper-paragraph {
-	width: 290px;
+  width: 290px;
 
-	p {
-		@include font($primary-font, 12px, 18px, $primary-color);
-	  font-weight: 400;
+  p {
+    @include font($primary-font, 12px, 18px, $primary-color);
 
-		@media (min-width: $tablet-width) {
-			@include font($primary-font, 14px, 22px, $primary-color);
-	    font-weight: 400;
-			margin: 0;
-		}
+    font-weight: 400;
+    margin: 11px 0 13px;
 
-		@media (min-width: $desktop-width) {
-			@include font($primary-font, 16px, 24px, $primary-color);
-	    font-weight: 400;
-		}
-	}
+    @media (min-width: $tablet-width) {
+      @include font($primary-font, 14px, 22px, $primary-color);
 
-	br {
-		display: none;
+      font-weight: 400;
+      margin: 0;
+    }
 
-		@media (min-width: $tablet-width) {
-			display: block;
-		}
+    @media (min-width: $desktop-width) {
+      @include font($primary-font, 16px, 24px, $primary-color);
 
-		@media (min-width: $desktop-width) {
-			display: none;
-		}
-	}
-	
-	@media (min-width: $tablet-width) {
-		width: 420px;
-	}
+      font-weight: 400;
+    }
+  }
 
-	@media (min-width: $desktop-width) {
-		width: 592px;
-	}
+  br {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: block;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 420px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 592px;
+  }
 }
 
 .gallery__swiper {
   width: 320px;
-	margin-bottom: 3px;
-	
-	@media (min-width: $tablet-width) {
-		width: 768px;
-	}
+  margin-bottom: 3px;
 
-	@media (min-width: $desktop-width) {
-		width: 1440px;
-	}
+  @media (min-width: $tablet-width) {
+    width: 768px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+  }
 }
 
 .gallery__swiper-wrapper {
   width: fit-content;
-	overflow: hidden;
-	display: flex;
+  overflow: hidden;
+  display: flex;
   align-items: flex-start;
   flex-flow: nowrap;
-	column-gap: 5px; 
 
-	@media (min-width: $desktop-width) {
-		width: 1440px;
-	}
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+    column-gap: 5px;
+  }
 }
 
 .gallery__gallery-slide {
-	display: flex;
-	flex-direction: column;
-	row-gap: 6px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 6px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: -1px;
+    row-gap: 6px;
+  }
+
+  @media (min-width: $desktop-width) {
+    row-gap: 6px;
+    margin: 0;
+  }
 }
 
 .gallery__slider-wrapper {
-	width: 320px;
-	padding: 20px 15px 31px;
+  width: 320px;
+  padding: 17px 15px 18px;
 
-	@media (min-width: $tablet-width) {
-		width: 768px;
-		padding: 40px 45px 21px;
-	}
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    padding: 40px 45px 21px;
+  }
 
-	@media (min-width: $desktop-width) {
-		width: 1440px;
-		padding: 100px 120px 46px;
-	}
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+    padding: 103px 120px 44px;
+  }
 }
 
 .gallery__wrapper-tablet {
-	@media (min-width: $tablet-width) {
-		display: flex;
-		width: 678px;
-	}
+  @media (min-width: $tablet-width) {
+    display: flex;
+    width: 678px;
+  }
 }
 
 .gallery__slider-nav {
-	display: none;
+  display: none;
 
-	@media (min-width: $tablet-width) {
-		display: flex;
-		column-gap: 4px;
-		justify-content: flex-end;
-		width: 258px;
-		margin-top: 31px;
-	}
+  @media (min-width: $tablet-width) {
+    display: flex;
+    column-gap: 4px;
+    justify-content: flex-end;
+    width: 258px;
+    margin-top: 30px;
+  }
 
-	@media (min-width: $desktop-width) {
-		display: none;
-	}
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
 }

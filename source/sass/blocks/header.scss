@@ -6,10 +6,10 @@
 .header__wrapper {
   width: 320px;
   margin: 0 auto;
-  padding: 15px 15px 11px;
+  padding: 15px 15px 13px;
   display: grid;
   grid-template-columns: 1fr 142px;
-  gap: 14px;
+  gap: 16px 14px;
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -110,6 +110,7 @@
 
 .header__tel {
   @include font($primary-font, 14px, 14px, $white-color);
+
   font-weight: 600;
   display: block;
   text-decoration: none;
@@ -121,6 +122,7 @@
 
   @media (min-width: $tablet-width) {
     @include font($primary-font, 16px, 16px, $white-color);
+
     font-weight: 600;
     width: 226px;
     line-height: 17px;
@@ -130,8 +132,9 @@
 
   @media (min-width: $desktop-width) {
     @include font($primary-font, 18px, 18px, $white-color);
+
     font-weight: 600;
-    width: auto;
+    width: 157px;
     padding-top: 3px;
   }
 
@@ -156,8 +159,6 @@
 }
 
 .header__list {
-  margin: 0;
-  padding: 0;
   list-style: none;
   width: 320px;
   margin: 0 auto;
@@ -170,12 +171,13 @@
 
   @media (min-width: $desktop-width) {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     width: auto;
     gap: 30px;
     padding: 0 133px;
+    width: 838px;
   }
 }
 
@@ -199,6 +201,7 @@
 
 .header__link {
   @include font($primary-font, 14px, 14px, $white-color);
+
   font-weight: 700;
   display: block;
   text-decoration: none;
@@ -210,11 +213,13 @@
 
   @media (min-width: $tablet-width) {
     @include font($primary-font, 16px, 16px, $white-color);
+
     font-weight: 700;
   }
 
   @media (min-width: $desktop-width) {
     @include font($primary-font, 16px, 16px, $white-color);
+
     font-weight: 400;
     letter-spacing: 0;
     text-transform: none;

@@ -1,0 +1,29 @@
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  @media (min-width: $mobile-width-only) {
+    width: 290px;
+
+    &--full-width {
+      width: 320px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 678px;
+
+    &--full-width {
+      width: 768px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1200px;
+
+    &--full-width {
+      width: 1440px;
+    }
+  }
+}

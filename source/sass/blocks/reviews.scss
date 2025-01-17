@@ -1,76 +1,79 @@
 .reviews {
-	margin: 0 auto;
+  margin: 0 auto;
   position: relative;
   width: 320px;
   overflow: hidden;
 
   @media (min-width: $tablet-width) {
-   width: 768px;
-   overflow: visible;
+    width: 768px;
+    overflow: visible;
   }
 
   @media (min-width: $desktop-width) {
     width: 1440px;
-   }
+  }
 }
 
 .reviews__title {
   @include font($primary-font, 22px, 22px, $primary-color);
-	font-weight: 800;
-  margin: 0 0 20px;
-  padding-top: 16px;
+
+  font-weight: 800;
+  margin: 0 0 31px;
+  padding-top: 18px;
   width: 290px;
   position: relative;
   z-index: 1;
-  
+
   &::before {
-		content: attr(title);
-		position: absolute;
-		z-index: -1;
-		color: rgba(45, 56, 63, 0.03);
-		font-size: 26px;
-		line-height: 26px;
-		left: 0;
-		top: 4px;
-		width: 290px;
-	}
+    content: attr(title);
+    position: absolute;
+    z-index: -1;
+    color: rgba(45, 56, 63, 0.03);
+    font-size: 26px;
+    line-height: 26px;
+    left: 0;
+    top: 4px;
+    width: 290px;
+  }
 
   @media (min-width: $tablet-width) {
     @include font($primary-font, 25px, 25px, $primary-color);
-	  font-weight: 800;
+
+    font-weight: 800;
     margin: 0;
     padding: 20px 0 10px;
     width: 600px;
 
     &::before {
-			content: attr(title);
-			position: absolute;
-			z-index: -1;
-			color: rgba(45, 56, 63, 0.03);
-			font-size: 40px;
-			line-height: 40px;
-			left: 0;
-			top: 4px;
-			width: 542px;
-		}
+      content: attr(title);
+      position: absolute;
+      z-index: -1;
+      color: rgba(45, 56, 63, 0.03);
+      font-size: 40px;
+      line-height: 40px;
+      left: 0;
+      top: 4px;
+      width: 542px;
+    }
   }
 
   @media (min-width: $desktop-width) {
     @include font($primary-font, 35px, 35px, $primary-color);
-	  font-weight: 800;
-    padding: 45px 0 0;
+
+    font-weight: 800;
+    padding: 26px 0 0;
 
     &::before {
-			content: attr(title);
-			position: absolute;
-			z-index: -1;
-			color: rgba(45, 56, 63, 0.03);
-			font-size: 55px;
-			line-height: 55px;
-			left: 0;
-			top: 6px;
-			width: 542px;
-		}
+      content: attr(title);
+      position: absolute;
+      z-index: -1;
+      color: rgba(45, 56, 63, 0.03);
+      font-size: 55px;
+      line-height: 55px;
+      left: 0;
+      top: -11px;
+      width: 542px;
+    }
   }
 }
 
@@ -90,7 +93,7 @@
 .reviews__reviews-slide {
   width: 290px;
   height: 484px;
-  padding: 20px; 
+  padding: 20px;
   background-color: $white-color;
 
   @media (min-width: $tablet-width) {
@@ -98,8 +101,8 @@
     height: 277px;
     display: flex;
     column-gap: 30px;
-    margin: 0; 
-    box-shadow: 0px 0px 20px 0px rgba(28, 51, 116, 0.1);
+    margin: 0;
+    box-shadow: 0 0 20px 0 rgba(28, 51, 116, 0.1);
   }
 
   @media (min-width: $desktop-width) {
@@ -107,8 +110,26 @@
   }
 }
 
+.reviews__gorod {
+  @include font($primary-font, 12px, 12px, $primary-font);
+
+  font-weight: 300;
+  margin: 0;
+
+  @media (min-width: $desktop-width) {
+    @include font($primary-font, 12px, 12px, $primary-font);
+
+    font-weight: 300;
+    margin: 0;
+  }
+}
+
 .reviews__container {
   width: 250px;
+  height: 259px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  word-break: break-word;
 
   @media (min-width: $tablet-width) {
     width: 299px;
@@ -120,8 +141,10 @@
 
   p {
     @include font($primary-font, 12px, 18px, $primary-font);
+
     font-weight: 400;
     width: 250px;
+    margin: 0 0 10px;
 
     @media (min-width: $tablet-width) {
       width: 299px;
@@ -130,6 +153,7 @@
 
     @media (min-width: $desktop-width) {
       @include font($primary-font, 14px, 22px, $primary-font);
+
       font-weight: 400;
       margin: 0 0 10px;
       width: 352px;
@@ -145,10 +169,29 @@
   }
 }
 
+.reviews__container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.reviews__container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.reviews__container::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  border: 2px solid transparent;
+}
+
+.reviews__container::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 .reviews__name {
   @include font($primary-font, 12px, 12px, $primary-font);
+
   font-weight: 700;
-  margin: 15px 0 8px;
+  margin: 16px 0 1px;
 
   @media (min-width: $tablet-width) {
     margin: 25px 0 6px;
@@ -156,20 +199,9 @@
 
   @media (min-width: $desktop-width) {
     @include font($primary-font, 13px, 13px, $primary-font);
+
     font-weight: 700;
     margin: 2px 0 8px;
-  }
-}
-
-.reviews__gorod {
-  @include font($primary-font, 12px, 12px, $primary-font);
-  font-weight: 300;
-  margin: 0;
-
-  @media (min-width: $desktop-width) {
-    @include font($primary-font, 12px, 12px, $primary-font);
-    font-weight: 300;
-    margin: 0;
   }
 }
 
@@ -191,7 +223,7 @@
 
 .reviews__container-slide {
   width: 290px;
-  padding: 20px 15px;
+  padding: 19px 15px 21px;
 
   @media (min-width: $tablet-width) {
     width: 723px;
@@ -200,7 +232,7 @@
 
   @media (min-width: $desktop-width) {
     width: 1320px;
-    padding: 100px 0 77px 130px;
+    padding: 120px 0 77px 120px;
   }
 }
 
@@ -213,7 +245,7 @@
 
   @media (min-width: $tablet-width) {
     min-width: 743px;
-    height: 277px; 
+    height: 277px;
     display: flex;
     justify-self: flex-start;
   }
@@ -221,6 +253,7 @@
   @media (min-width: $desktop-width) {
     min-width: 1320px;
     height: 293px;
+    margin-left: 10px;
   }
 }
 
@@ -228,8 +261,8 @@
   display: block;
   width: 290px;
   height: 484px;
-  background-color: $white-color; 
-  box-shadow: 0px 0px 20px 0px rgba(28, 51, 116, 0.1);
+  background-color: $white-color;
+  box-shadow: 0 0 20px 0 rgba(28, 51, 116, 0.1);
 
   @media (min-width: $tablet-width) {
     width: 565px;
@@ -245,14 +278,13 @@
 
 .reviews__img {
   display: block;
-  margin: 0 0 20px;
+  margin: 0 0 19px;
 }
 
 .reviews__button-wrapper {
   display: none;
 
   @media (min-width: $tablet-width) {
-    display: block;
     height: 35px;
     margin-top: 20px;
     display: flex;
@@ -263,7 +295,7 @@
 
   @media (min-width: $desktop-width) {
     width: 600px;
-    margin-top: 45px;
+    margin-top: 26px;
   }
 }
 
@@ -278,5 +310,6 @@
 
   @media (min-width: $desktop-width) {
     width: 1200px;
+    margin-bottom: 38px;
   }
 }

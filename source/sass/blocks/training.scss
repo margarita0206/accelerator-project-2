@@ -1,112 +1,125 @@
 .training {
-	width: 320px;
+  width: 320px;
   padding: 20px 15px;
-	margin: 0 auto;
+  margin: 0 auto;
 
-	@media (min-width: $tablet-width) {
-		width: 768px;
+  @media (min-width: $tablet-width) {
+    width: 768px;
     padding: 40px 45px;
-	}
+  }
 
-	@media (min-width: $desktop-width) {
-		width: 1440px;
+  @media (min-width: $desktop-width) {
+    width: 1440px;
     padding: 40px 120px;
-	}
-	
-	p {
-		@include font($primary-font, 14px, 20px, $primary-color);
+  }
+
+  p {
+    @include font($primary-font, 14px, 20px, $primary-color);
+
     font-weight: 400;
-		width: 290px;
-		margin-bottom: 29px;
-	}
+    width: 290px;
+    margin-bottom: 29px;
 
-	@media (min-width: $tablet-width) {
-		p {
-			@include font($primary-font, 16px, 24px, $primary-color);
-			font-weight: 400;
-			width: 678px;
-			margin-bottom: 27px;
-		}
-	}
+    @media (min-width: $tablet-width) {
+      @include font($primary-font, 16px, 24px, $primary-color);
 
-	@media (min-width: $desktop-width) {
-		p {
-			width: 820px;
-			margin-bottom: 54px;
-		}
-	}
+      font-weight: 400;
+      width: 678px;
+      margin-bottom: 27px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 820px;
+      margin-bottom: 54px;
+    }
+  }
 }
 
 .training__title {
   @include font($primary-font, 22px, 22px, $primary-color);
+
   font-weight: 800;
-	margin-bottom: 17px;
-  padding-top: 17px;
+  margin-bottom: 17px;
+  padding-top: 11px;
   padding-bottom: 16px;
-	text-align: left;
+  text-align: left;
   width: 290px;
   z-index: 1;
   position: relative;
 
   &::before {
-		content: attr(title);
-		position: absolute;
-		z-index: -1;
-		color: rgba(45, 56, 63, 0.03);
-		font-size: 26px;
-		line-height: 26px;
-		left: 0;
-		top: 1px;
-		width: 290px;
-	}
+    content: attr(title);
+    position: absolute;
+    z-index: -1;
+    color: rgba(45, 56, 63, 0.03);
+    font-size: 26px;
+    line-height: 26px;
+    left: 0;
+    top: 1px;
+    width: 290px;
+  }
 
-	@media (min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     @include font($primary-font, 25px, 25px, $primary-color);
+
     font-weight: 800;
-		padding: 20px 0 10px;
+    padding: 20px 0 10px;
     margin-bottom: 24px;
     width: 678px;
 
     &::before {
-			content: attr(title);
-			position: absolute;
-			z-index: -1;
-			color: rgba(45, 56, 63, 0.03);
-			font-size: 40px;
-			line-height: 40px;
-			left: 0;
-			top: 4px;
-			width: 542px;
-		}
-	}
+      content: attr(title);
+      position: absolute;
+      z-index: -1;
+      color: rgba(45, 56, 63, 0.03);
+      font-size: 40px;
+      line-height: 40px;
+      left: 0;
+      top: -4px;
+      width: 542px;
+    }
+  }
 
-	@media (min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     @include font($primary-font, 35px, 35px, $primary-color);
+
     font-weight: 800;
-		padding: 23px 0 1px;
+    padding: 23px 0 1px;
     margin-bottom: 31px;
     width: 1200px;
 
     &::before {
-			content: attr(title);
-			position: absolute;
-			z-index: -1;
-			color: rgba(45, 56, 63, 0.03);
-			font-size: 55px;
-			line-height: 55px;
-			left: 0;
-			top: 6px;
-			width: 542px;
-		}
-	}
+      content: attr(title);
+      position: absolute;
+      z-index: -1;
+      color: rgba(45, 56, 63, 0.03);
+      font-size: 55px;
+      line-height: 55px;
+      left: 0;
+      top: 6px;
+      width: 542px;
+    }
+  }
+}
+
+.training__br {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
 }
 
 .training__heading {
-	padding: 0;
+  padding: 0;
   font-size: 16px;
   font-weight: 700;
   line-height: 16px;
-  margin: 25px 0 23px;
+  margin: 26px 0 23px;
 
   @media (min-width: $tablet-width) {
     font-size: 18px;
@@ -123,7 +136,7 @@
 
 .training__list {
   margin: 0;
-	padding: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -136,7 +149,7 @@
     column-gap: 134px;
   }
 
-	@media (min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     grid-template-columns: repeat(4, 1fr);
     column-gap: 0;
     row-gap: 30px;
@@ -256,7 +269,7 @@
     left: 0;
   }
 
-  &::before {    
+  &::before {
     content: "";
     display: block;
     position: absolute;

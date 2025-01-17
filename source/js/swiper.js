@@ -1,22 +1,42 @@
 import Swiper from 'swiper/bundle';
 import { setCustomSlideMove, throttle } from './utils';
 import { Screen } from './const';
+import { analyzeImageColor } from './color';
 
 let advSwiper = null;
 let gallerySwiper = null;
+
+const heroContainer = document.querySelector('.hero');
+
+const changeStandardActivePaginationClass = (customActiveClass) => {
+  const bullets = document.querySelectorAll('.hero__swiper-pagination-bullet');
+  const standardActive = document.querySelector('.swiper-pagination-bullet-active');
+  bullets.forEach((bullet) => {
+    bullet.classList.remove(customActiveClass);
+  });
+  standardActive?.classList.add(customActiveClass);
+};
+
+const updateBackgroundColor = (swiper) => {
+  const activeSlide = swiper.slides[swiper.activeIndex];
+  const image = activeSlide.querySelector('.hero__picture');
+  if (image) {
+    const averageColor = analyzeImageColor(image);
+    heroContainer.style.backgroundColor = averageColor;
+  }
+};
 
 export const heroSwiper = new Swiper('.swiper', {
   direction: 'horizontal',
   init: false,
   loop: true,
   simulateTouch: false,
-  slidesPerView: 1,
+  keyboard: {
+    enabled: false,
+  },
   pagination: {
     clickable: true,
-    type: 'bullets',
     el: '.swiper-pagination',
-    bulletClass: 'hero__swiper-pagination-bullet',
-    bulletActiveClass: 'hero__swiper-pagination-bullet--active',
     renderBullet: function (index, className) {
       return `<span class="${className} hero__swiper-pagination-bullet hero__swiper-pagination-bullet--${index}"
         aria-label="Перейти к слайду ${index + 1}."
@@ -41,7 +61,34 @@ export const heroSwiper = new Swiper('.swiper', {
       }
     },
   },
+  on: {
+    init: function() {
+      changeStandardActivePaginationClass('hero__swiper-pagination-bullet--active');
+      togglePaginationClickable();
+    },
+    slideChange: function() {
+      changeStandardActivePaginationClass('hero__swiper-pagination-bullet--active');
+      updateBackgroundColor(this);
+    },
+  },
+  slidesPerView: 1,
 });
+
+function togglePaginationClickable () {
+  if (window.innerWidth < Screen.desktop) {
+    heroSwiper.params.pagination.clickable = false;
+    const bullets = document.querySelectorAll('.hero__swiper-pagination-bullet');
+    bullets.forEach((bullet) => {
+      bullet.style.pointerEvents = 'none';
+    });
+  } else {
+    heroSwiper.params.pagination.clickable = true;
+    const bullets = document.querySelectorAll('.hero__swiper-pagination-bullet');
+    bullets.forEach((bullet) => {
+      bullet.style.pointerEvents = '';
+    });
+  }
+}
 
 export const toursSwiper = new Swiper('.swiper2', {
   direction: 'horizontal',
@@ -85,7 +132,7 @@ export const swiperCoach = new Swiper('.swiper3', {
   keyboard: {
     enabled: false,
   },
-  
+
   slideClass: 'coach__item',
   wrapperClass: 'coach__list',
   breakpoints: {

@@ -1,145 +1,177 @@
 .about {
-	width: 320px;
+  width: 320px;
   margin: 0 auto;
-	
-	@media(min-width: $tablet-width) {
-		width: 768px;
-		margin: 0;
-	}
+  padding-top: 20px;
 
-	@media(min-width: $desktop-width) {
-		width: 1440px;
-	}
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    margin: 0;
+    padding: 40px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+    padding: 0;
+  }
 }
 
 .about__text {
-	width: 290px;
-	margin: 0 auto;
-	padding-bottom: 20px;
+  width: 290px;
+  margin: 0 auto;
+  padding-bottom: 20px;
 
-	h2 {
-		@include font($primary-font, 22px, 22px, $primary-color);
-    font-weight: 800;
-		z-index: 1;
-		position: relative;
-		margin: 0 0 42px;
-		width: 290px;
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    transform: translate(-1px, 1px);
+    padding: 20px 0 20px;
+  }
 
-		&::before {
-			content: attr(title); 
-			position: absolute;
-      z-index: -1;
-			color: rgba(45, 56, 63, 0.03);
-		  font-size: 26px;
-		  line-height: 26px;
-		  left: 0;
-		  top: -8px;
-		}
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    transform: none;
+    padding: 38px 0 20px;
+  }
 
-		@media(min-width: $tablet-width) {
-			@include font($primary-font, 25px, 25px, $primary-color);
-      font-weight: 800;
-			margin: 0 0 46px;
+  h3 {
+    @include font($primary-font, 16px, 16px, $primary-color);
 
-			&::before {
-				content: attr(title);
-				position: absolute;
-				z-index: -1;
-				color: rgba(45, 56, 63, 0.03);
-				font-size: 40px;
-				line-height: 40px;
-				left: 0;
-				top: -15px;
-				width: 542px;
-			}
-		}
-
-		@media(min-width: $desktop-width) {
-			@include font($primary-font, 35px, 35px, $primary-color);
-      font-weight: 800;
-			margin: 0 0 57px;
-
-			&::before {
-				content: attr(title);
-				position: absolute;
-				z-index: -1;
-				color: rgba(45, 56, 63, 0.03);
-				font-size: 55px;
-				line-height: 55px;
-				left: 0;
-				top: -38px;
-				width: 542px;
-			}
-		}
-	}
-
-	h3 {
-		@include font($primary-font, 16px, 16px, $primary-color);
     font-weight: 700;
-		margin: 0;
-		margin-bottom: 13px;
-		width: 290px;
+    margin: 0;
+    margin-bottom: 13px;
+    width: 290px;
 
-		@media(min-width: $desktop-width) {
-			margin-bottom: 20px;
-		}
-	}
+    @media (min-width: $tablet-width) {
+      @include font($primary-font, 18px, 18px, $primary-color);
 
-	p {
-		@include font($primary-font, 14px, 20px, $primary-color);
+      font-weight: 700;
+      margin-bottom: 11px;
+    }
+
+    @media (min-width: $desktop-width) {
+      @include font($primary-font, 21px, 21px, $primary-color);
+
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+  }
+
+  p {
+    @include font($primary-font, 14px, 20px, $primary-color);
+
     font-weight: 400;
-		margin: 0;
-		margin-bottom: 25px;
-		width: 290px;
+    margin: 0;
+    margin-bottom: 27px;
+    width: 290px;
 
-		&:last-child {
-			margin-bottom: 0;
-		}
+    &:last-child {
+      margin-bottom: 0;
+    }
 
-		@media (min-width: $tablet-width) {
-			width: 238px;
-		}
+    @media (min-width: $tablet-width) {
+      @include font($primary-font, 16px, 24px, $primary-color);
 
-		@media (min-width: $desktop-width) {
-			width: 585px;
-		}
-	}
-	
-	@media (min-width: $tablet-width) {
-		margin: 0;
-		transform: translateX(-95px);
-	}
+      font-weight: 400;
+      width: 270px;
+      margin-bottom: 30px;
+    }
 
-	@media (min-width: $desktop-width) {
-		margin: 0;
-		transform: none;
-	}
+    @media (min-width: $desktop-width) {
+      @include font($primary-font, 14px, 22px, $primary-color);
+
+      font-weight: 400;
+      width: 585px;
+    }
+  }
+}
+
+h2 {
+  @include font($primary-font, 22px, 22px, $primary-color);
+
+  font-weight: 800;
+  z-index: 1;
+  position: relative;
+  margin: 6px 0 42px;
+  width: 290px;
+
+  &::before {
+    content: attr(title);
+    position: absolute;
+    z-index: -1;
+    color: rgba(45, 56, 63, 0.03);
+    font-size: 26px;
+    line-height: 26px;
+    left: 0;
+    top: -8px;
+  }
+
+  @media (min-width: $tablet-width) {
+    @include font($primary-font, 25px, 25px, $primary-color);
+
+    font-weight: 800;
+    margin: 0 0 48px;
+
+    &::before {
+      content: attr(title);
+      position: absolute;
+      z-index: -1;
+      color: rgba(45, 56, 63, 0.03);
+      font-size: 40px;
+      line-height: 40px;
+      left: 0;
+      top: -15px;
+      width: 542px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    @include font($primary-font, 35px, 35px, $primary-color);
+
+    font-weight: 800;
+    margin: 0 0 59px;
+
+    &::before {
+      content: attr(title);
+      position: absolute;
+      z-index: -1;
+      color: rgba(45, 56, 63, 0.03);
+      font-size: 55px;
+      line-height: 55px;
+      left: 0;
+      top: -38px;
+      width: 542px;
+    }
+  }
 }
 
 .about__picture {
-	width: 320px;
-	margin: 0 auto;
+  display: block;
+  object-fit: cover;
+  width: 320px;
+  margin: 0 auto;
+  padding-bottom: 6px;
 
-	@media (min-width: $tablet-width) {
-		width: 542px;
-		margin: 0;
-	}
+  @media (min-width: $tablet-width) {
+    width: auto;
+    height: 353px;
+    margin: 0;
+    margin-top: 155px;
+  }
 
-	@media (min-width: $desktop-width) {
-		width: 660px;
-		margin: 0;
-	}
+  @media (min-width: $desktop-width) {
+    width: 660px;
+    height: 498px;
+    margin: 0;
+  }
 }
 
 .about__container {
-	@media (min-width: $tablet-width) {
-		display: flex;
-		padding: 40px 0;
-	}
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
 
-	@media (min-width: $desktop-width) {
-		width: 1440px;
-		flex-wrap: wrap;
-		padding: 100px 0;
-	}
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+    flex-wrap: wrap;
+    padding: 100px 0;
+  }
 }

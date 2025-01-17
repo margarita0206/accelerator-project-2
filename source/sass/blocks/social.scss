@@ -1,13 +1,13 @@
 .social {
-	margin: 0 0 23px;
+  margin: 0 0 17px;
 
-	@media (min-width: $tablet-width) {
-		margin: 0 0 34px;
-	}
+  @media (min-width: $tablet-width) {
+    margin: 0 0 28px;
+  }
 
-	@media (min-width: $desktop-width) {
-		margin: 0 0 22px;
-	}
+  @media (min-width: $desktop-width) {
+    margin: 0 0 22px;
+  }
 }
 
 .social__link {
@@ -53,21 +53,22 @@
     border: 1px solid rgba(45, 56, 63, 0.3);
   }
 
-	&:hover {
+  &:hover {
     background-color: $white-color;
 
-		&::before {
+    &::before {
       background-color: $primary-color;
-		}
+    }
 
     &::after {
       border-color: $primary-color;
     }
-	}
+  }
 
-	&:focus,
+  &:focus,
   &:focus-visible {
     background-color: $white-color;
+
     &::before {
       background-color: $primary-color;
     }
@@ -78,7 +79,7 @@
   }
 
   &:active {
-		background-color: $blue-color;
+    background-color: $blue-color;
 
     &::before {
       background-color: $white-color;
@@ -96,34 +97,34 @@
 
     &::before {
       background-color: $primary-color;
-			opacity: 0.5;
+      opacity: 0.5;
     }
 
     &::after {
       background-color: $primary-color;
-			opacity: 0.5;
+      opacity: 0.5;
     }
   }
 }
 
 .social__item {
-	list-style-type: none;
+  list-style-type: none;
 }
 
 .social__list {
-	display: flex;
-	flex-wrap: wrap;
-	column-gap: 16px;
-	width: 320px;
-	margin: 0 auto;
-	padding: 0;
-	justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 16px;
+  width: 320px;
+  margin: 0 auto;
+  padding: 0;
+  justify-content: center;
 
-	@media (min-width: $tablet-width) {
-		width: 122px;
-	}
+  @media (min-width: $tablet-width) {
+    width: 122px;
+  }
 
-	@media (min-width: $desktop-width) {
-		width: 1200px;
-	}
+  @media (min-width: $desktop-width) {
+    width: 1200px;
+  }
 }
