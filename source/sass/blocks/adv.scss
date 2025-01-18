@@ -224,7 +224,6 @@
     font-weight: 400;
     margin: 0;
     width: 270px;
-    margin-left: -1px;
 
     @media (min-width: $tablet-width) {
       @include font($primary-font, 14px, 22px, $primary-color);
