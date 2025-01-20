@@ -118,11 +118,11 @@
 
   font-weight: 400;
   margin-bottom: 8px;
-  padding-top: 1px;
   width: 258px;
   height: 50px;
-  padding: 0 15px;
-  border: none;
+  padding: 1px 0 15px;
+  border: 1px solid rgba(2, 102, 193, 0.1);
+  border-radius: 2px;
 
   @media (min-width: $tablet-width) {
     width: 360px;
@@ -136,8 +136,62 @@
   }
 }
 
+.form__input:hover {
+  border-color: #0266c1;
+}
+
+.form__input:focus {
+  border-color: $primary-color;
+  outline: none;
+}
+
+.form__input:disabled {
+  color: #999999;
+  border-color: #999999;
+  background: $white-color;
+}
+
+.form__input--disabled {
+  border: 1px solid #ff121f;
+  background-color: $white-color;
+}
+
+.form__input-wrapper {
+  position: relative;
+}
+
 .form__label {
-  display: none;
+  position: absolute;
+  display: block;
+  width: 258px;
+  border: 1px solid rgba(2, 102, 193, 0.1);
+  border-radius: 2px;
+  padding: 17px 14px;
+  height: 50px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: left;
+  color: rgba(45, 56, 63, 0.5);
+  background-color: $white-color;
+  top: 0;
+  left: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 360px;
+    height: 56px;
+    padding: 19px 29px;
+  }
+
+  &:has(~ .form__input:disabled) {
+    color: #999999;
+  }
+
+  &:has(~ .form__input:focus),
+  &:has(~ .form__input:focus-visible),
+  &:has(~.form__input:active) {
+    display: none;
+  }
 }
 
 .form__button {

@@ -38,7 +38,7 @@
   min-height: 457px;
   overflow: hidden;
   width: 320px;
-  
+
   @media (min-width: $tablet-width) {
     width: 768px;
   }
@@ -66,7 +66,7 @@
     font-size: 26px;
     line-height: 26px;
     left: 0;
-    top: 5px;
+    top: 6px;
     width: 290px;
   }
 
@@ -118,7 +118,7 @@
     @include font($primary-font, 12px, 18px, $primary-color);
 
     font-weight: 400;
-    margin: 11px 0 12px;
+    margin: 12px 0 0;
 
     @media (min-width: $tablet-width) {
       @include font($primary-font, 14px, 22px, $primary-color);
@@ -191,21 +191,36 @@
   display: flex;
   flex-direction: column;
   row-gap: 6px;
+  height: 266px;
 
   @media (min-width: $tablet-width) {
     margin-top: -1px;
     row-gap: 6px;
+    height: 418px;
   }
 
   @media (min-width: $desktop-width) {
     row-gap: 6px;
     margin: 0;
+    height: 463px;
+  }
+}
+
+.gallery__img--small-two {
+  height: 135px;
+
+  @media (min-width: $tablet-width) {
+    height: 210px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 233px;
   }
 }
 
 .gallery__slider-wrapper {
   width: 320px;
-  padding: 17px 15px 19px;
+  padding: 17px 15px 30px;
 
   @media (min-width: $tablet-width) {
     width: 768px;

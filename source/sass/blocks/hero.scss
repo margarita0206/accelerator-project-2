@@ -24,40 +24,41 @@
 
 .hero__slide-button {
   @include font($primary-font, 16px, 16px, $white-color);
+
   font-weight: 500;
-	width: 180px;
-	min-height: 56px;
-	background-color: $blue-color;
-	border: none;
-	cursor: pointer;
+  width: 180px;
+  min-height: 56px;
+  background-color: $blue-color;
+  border: none;
+  cursor: pointer;
   padding: 20px 2px 19px;
 
-	&:hover {
-		background-color: $white-color;
-		border: 1px solid #1c3374;
-		color: #1c3374;
-	}
+  &:hover {
+    background-color: $white-color;
+    border: 1px solid #1c3374;
+    color: #1c3374;
+  }
 
-	&:focus {
-		background-color: $white-color;
-		border: none;
-		color: #1c3374;
-	}
+  &:focus {
+    background-color: $white-color;
+    border: none;
+    color: #1c3374;
+  }
 
-	&:focus-visible {
-		background-color: $white-color;
-		border: none;
-		color: #1c3374;
-	}
+  &:focus-visible {
+    background-color: $white-color;
+    border: none;
+    color: #1c3374;
+  }
 
-	&:active {
-		background-color: #1c3374;
-		color: $white-color;
-	}
+  &:active {
+    background-color: #1c3374;
+    color: $white-color;
+  }
 
-	&:disabled {
-		background-color: #999999;
-	}
+  &:disabled {
+    background-color: #999999;
+  }
 }
 
 .hero.hero--menu-open .hero__swiper {
@@ -124,6 +125,7 @@
 
   b {
     @include font($primary-font, 26px, 26px, $white-color);
+
     font-weight: 800;
     display: block;
     word-break: break-word;
@@ -131,6 +133,7 @@
 
   p {
     @include font($primary-font, 15px, 20px, $white-color);
+
     font-weight: 400;
     margin: 0;
     word-break: break-word;
@@ -146,6 +149,7 @@
 
 .hero__slide-offer {
   @include font($primary-font, 12px, 18px, $white-color);
+
   font-weight: 400;
   border: solid 1px rgba(255, 255, 255, 0.5);
   min-height: 44px;
@@ -220,7 +224,6 @@
     border-radius: 50%;
     border: solid 1px rgba(255, 255, 255, 0.5);
     opacity: 0;
-    transition: opacity 0.3 scubic-bezier(0.4, 0, 0.4, 1);
   }
 
   &::before {
@@ -363,6 +366,7 @@
 
     b {
       @include font($primary-font, 56px, 56px, $white-color);
+
       font-weight: 800;
       margin: 0;
       padding: 0 40px;
@@ -370,6 +374,7 @@
 
     p {
       @include font($primary-font, 17px, 24px, $white-color);
+
       font-weight: 400;
       margin: 0;
       padding: 0 80px;
@@ -432,6 +437,7 @@
 
     b {
       @include font($primary-font, 77px, 77px, $white-color);
+
       font-weight: 800;
       margin: 0;
       padding: 0;
@@ -440,6 +446,7 @@
 
     p {
       @include font($primary-font, 17px, 24px, $white-color);
+
       font-weight: 400;
       margin: 0;
       padding: 0 480px 0 0;

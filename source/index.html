@@ -745,7 +745,8 @@
             </div>
           </div>
         </div>
-      </section>      <section class="main__gallery gallery" id="gallery" data-test="gallery">
+      </section>   
+      <section class="main__gallery gallery" id="gallery" data-test="gallery">
         <div class="gallery__wrapper">
           <div class="gallery__slider-wrapper slider-wrapper">
             <h2 class="gallery__title title" title="Фотогалерея">Фотогалерея</h2>
@@ -784,8 +785,8 @@
                     <source media="(min-width: 1440px)" width="284" height="233" type="image/jpg" srcset="img/gallery-desktop2@1x.jpg 1x, img/gallery-desktop2@2x.jpg 2x">
                     <source media="(min-width: 768px)" width="252" height="210" type="image/webp" srcset="img/gallery-tablet2@1x.webp 1x, img/gallery-tablet2@2x.webp 2x">
                     <source media="(min-width: 768px)" width="252" height="210" type="image/jpg" srcset="img/gallery-tablet2@1x.jpg 1x, img/gallery-tablet2@2x.jpg 2x">
-                    <source width="157" height="134" type="image/webp" srcset="img/gallery-mobile2@1x.webp 1x, img/gallery-mobile2@2x.webp 2x">
-                    <img class="gallery__img gallery__img--small" src="img/gallery-mobile2@1x.jpg" width="157" height="134" srcset="img/gallery-mobile2@2x.jpg 2x" alt="Компания путешественников сидит ночью у костра." loading="lazy" fetchpriority="low">
+                    <source width="157" height="135" type="image/webp" srcset="img/gallery-mobile2@1x.webp 1x, img/gallery-mobile2@2x.webp 2x">
+                    <img class="gallery__img gallery__img--small gallery__img--small-two" src="img/gallery-mobile2@1x.jpg" width="157" height="135" srcset="img/gallery-mobile2@2x.jpg 2x" alt="Компания путешественников сидит ночью у костра." loading="lazy" fetchpriority="low">
                   </picture>
                 </div>
                 <div class="gallery__picture">
@@ -855,10 +856,14 @@
           <p>Заполните форму и наш оператор<br> свяжется<br> с вами для консультации.</p>
           <div class="form__wrapper">
             <form class="form__form-question" method="post" action="https://echo.htmlacademy.ru">
-              <label class="form__label" for="tel">Телефон</label>
-              <input class="form__input" type="tel" name="tel" id="tel" pattern="\+?[0-9\s\-\(\)]+" minlength="11" maxlength="13" placeholder="Телефон" required>
-              <label class="form__label" for="email">Email</label>
-              <input class="form__input" type="text" name="email" id="email" pattern=" /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-zа-яё]{2,4}$/i" placeholder="Email" required>
+              <div class="form__input-wrapper">
+                <label class="form__label" for="tel">Телефон</label>
+                <input class="form__input" type="tel" name="tel" id="tel" pattern="\+?[0-9\s\-\(\)]+" minlength="11" maxlength="13" placeholder="+7 (000)-000-00-00" required>
+              </div>
+              <div class="form__input-wrapper">
+                <label class="form__label" for="email">Email</label>
+                <input class="form__input" type="text" name="email" id="email" pattern=" /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-zа-яё]{2,4}$/i" placeholder="Email" required>
+              </div>
               <button class="form__button" type="submit">Отправить</button>
             </form>
           </div>
